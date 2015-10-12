@@ -1,6 +1,6 @@
 [{
-  "input": "./src/assets/scripts/examples/app.coffee",
+  "input": "./src/assets/scripts/app.coffee",
   "output": "app.js",
-  "public": "./public/scripts/examples",
-  "dist": "./dist/scripts/examples"
+  "public": "./public/scripts",
+  "dist": "./dist/scripts"
 }]

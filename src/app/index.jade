@@ -1,19 +1,28 @@
 ---
 page_title: "首页"
-mobile_page: true
+stylesheets: ["index"]
+body_class: ["home-page"]
+services:
+  -
+    title: "1111"
+    desc: "desc11111"
+  -
+    title: "1111"
+    desc: "desc11111"
+  -
+    title: "1111"
+    desc: "desc11111"
+  -
+    icon: "link"
+    label: "desc11111"
 ---
 
 extends _layout
 
 block content
-  p
-    != environment
-  p
-    != current.base
-  p
-    != current.source
-  p
-    != current.path
+  .banner
+
+  .adfasf
 
 block scripts
-  script(src="#{current.base}scripts/examples/app.js")
+  script(src="#{current.base}scripts/app.js")

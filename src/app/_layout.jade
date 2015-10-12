@@ -1,3 +1,11 @@
+//- 导入元件
+//------------------------------
+//- 全站公用元件
+include partials/_components
+
+//- 浮层
+include partials/_modals
+
 doctype html
 html
   head
@@ -13,18 +21,24 @@ html
       meta(http-equiv="cleartype", content="on")
       meta(name="format-detection", content="telephone=no")
       meta(name="msapplication-TileColor", content="#222222")
-    link(href="#{current.base}styles/main.css", rel="stylesheet")
+    link(href="#{current.base}styles/base.css", rel="stylesheet")
+    if stylesheets
+      each stylesheet in stylesheets
+        link(rel="stylesheet", href="#{current.base}styles/#{stylesheet}.css")
     if html5
       <!--[if lt IE 9]>
       script(src="http://cdn.staticfile.org/html5shiv/3.7/html5shiv.min.js")
       <![endif]-->
-  body
-    block header
-      include partials/_header
+  body(class="#{body_class ? body_class : ''}", id="#{body_id ? body_id : ''}")
+    .wrap
+      block header
+        include partials/_header
 
-    block content
+      block content
 
-    block footer
-      include partials/_footer
+      block footer
+        include partials/_footer
+
+    +modal({modals:modals})
 
     block scripts

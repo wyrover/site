@@ -1,0 +1,26 @@
+mixin modal(params)
+  - var params = params || {}
+
+  // Start: 全局信息提示浮层
+  .modal.modal-tips#modalPay
+    .modal-dialog
+      .modal-header
+        h3 提示
+      .modal-body
+    span.close
+  // End: 全局信息提示浮层
+
+  if params.modals
+    for modal in params.modals
+      case modal
+        when "modal-pay"
+          // Start: 支付浮层
+          .modal.modal-pay#modalPay
+            .modal-dialog
+              .modal-header
+                h3 支付
+              .modal-body
+                .actions
+                  +button({classes:["btn-large"]})
+            span.close
+          // End: 支付浮层

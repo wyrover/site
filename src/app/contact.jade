@@ -1,0 +1,38 @@
+---
+page_title: "联系我们"
+modals: ["modal-pay"]
+stylesheets: ["code", "index"]
+services:
+  -
+    title: "1111"
+    desc: "desc11111"
+  -
+    title: "1111"
+    desc: "desc11111"
+  -
+    title: "1111"
+    desc: "desc11111"
+  -
+    icon: "link"
+    label: "desc11111"
+---
+
+extends _layout
+
+block content
+  ul
+    each service in services
+      li
+        h3= service.title
+        p= service.desc
+  p
+    != environment
+  p
+    != current.base
+  p
+    != current.source
+  p
+    != current.path
+
+block scripts
+  script(src="#{current.base}scripts/examples/app.js")

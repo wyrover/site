@@ -1,7 +1,7 @@
 chai = require "chai"
 chai.should()
 
-{Task, TaskList} = require "../../../src/assets/scripts/examples/task"
+{Task, TaskList} = require "../../src/assets/scripts/task"
 
 describe 'Task instance', ->
   task1 = task2 = null
