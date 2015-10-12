@@ -3,15 +3,53 @@
 //------------------------------
 
 .header
+  height 86px
   background #FFF
 
   .logo
     margin 0
+    size 137px 43px
+    padding-top 20px
 
+    a
+    img
+      display block
+
+
+// 主导航
 .main-nav
+  absolute right 190px top
+
   ul
     reset-list()
     clearfix()
 
   li
     float left
+
+    & > a
+      line-height 86px
+      display block
+      font-size 16px
+      color #393939
+      padding 0 15px
+
+      &:hover
+        background #F8F8F8
+        text-decoration none
+        color red
+
+    &.current
+      a
+        color red
+
+// 登录与注册
+.head-actions
+  absolute right top 30px
+  font-size 0
+
+  .btn
+    width 80px
+    padding 0
+    font-weight bold
+    margin-left 10px
