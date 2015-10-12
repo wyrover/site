@@ -11,7 +11,7 @@ functions:
     label: "设备管理"
   -
     icon: "user"
-    label: "用户管理"  
+    label: "用户管理"
   -
     icon: "warning"
     label: "告警服务"
@@ -55,7 +55,7 @@ block content
   .main-smart
     .container
       h3 从容应对智能化时代
-      p 
+      p
         | 您只需，专注于您的产品创新，云智易为您提供强有力、全方位的云平台和技术支持，
         br
         | 贴心满足各行各业的物联网+ 需求，助您先智于人
@@ -63,15 +63,18 @@ block content
         each item in functions
           li: span= item.label
   // End: 智能化时代
+
   // Start: 物联网服务
   .main-service
     .container
       h3 提供专业的物联网+服务
       ul.service-icons
         each list in services
-          li: span= list.label
-              p= list.desc
-  // End: 物联网服务            
+          li
+            h4= list.label
+            p= list.desc
+  // End: 物联网服务
+
   // Start: 免费开通
   .main-opening
     .container
@@ -85,8 +88,9 @@ block content
         span 每天消息发送量
         em 1600万+
       .sec
-        a(href="#")立即免费开通
+        a(href="#") 立即免费开通
   // End: 免费开通
+
   // Start: 云智易物联平台
   .main-cooperation
     .container
@@ -94,5 +98,6 @@ block content
       p 超过5000家客户和合作伙伴信任、使用云智易物联平台
       .customer
   // End: 云智易物联平台
+
 block scripts
   script(src="#{current.base}scripts/app.js")
