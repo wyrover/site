@@ -37,7 +37,7 @@ services:
     label: "中立&开放"
     desc: "已对接微信、Google Nest、Homekit平台实现智能互联，支持您的业务系统对接，实现业务运营升级"
   -
-    icon: "backport"
+    icon: "netural"
     label: "全球化后端"
     desc: "无论您的产品和用户身处何处，均可得到可靠的云端服务，全球化的部署支持，涵盖亚太、北美/南美、欧洲等热点区"
   -
@@ -78,6 +78,7 @@ block content
       ul.service-icons
         each list in services
           li
+            i(class="icon-#{list.icon}")
             h4= list.label
             p= list.desc
   // End: 物联网服务
@@ -85,17 +86,17 @@ block content
   // Start: 免费开通
   .main-opening
     .container
-      .sec
+      .sec.mr70
         span 企业
         em 5000+
-      .sec
+      .sec.mr60
         span 服务设备量
         em 750万+
-      .sec
+      .sec.mr30
         span 每天消息发送量
         em 1600万+
       .sec
-        a(href="#") 立即免费开通
+        a.btn.btn-lg.btn-pill(href="#") 立即免费开通
   // End: 免费开通
 
   // Start: 云智易物联平台
@@ -104,6 +105,16 @@ block content
       h3 5000+
       p 超过5000家客户和合作伙伴信任、使用云智易物联平台
       .customer
+        img(src="#{current.base}images/brand_leedarson.jpg")
+        img(src="#{current.base}images/brand_leedarson.jpg")
+        img(src="#{current.base}images/brand_leedarson.jpg")
+        img(src="#{current.base}images/brand_leedarson.jpg")
+        img(src="#{current.base}images/brand_leedarson.jpg")
+        img(src="#{current.base}images/brand_leedarson.jpg")
+        img(src="#{current.base}images/brand_leedarson.jpg")
+        img(src="#{current.base}images/brand_leedarson.jpg")
+        img(src="#{current.base}images/brand_leedarson.jpg")
+        img(src="#{current.base}images/brand_leedarson.jpg")
   // End: 云智易物联平台
 
 block scripts

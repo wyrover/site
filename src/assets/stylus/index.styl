@@ -36,7 +36,7 @@
 $main-h3
   color red
   font-size 40px
-
+  margin 0
 $main-p
   color #393939
   font-size 20px
@@ -55,22 +55,106 @@ $main-p
     reset-list()
     clearfix()
 
-  li
+    li
+      float left
+      width 65px
+      height 101px
+      padding 0 27px
+
+      i
+        display inline-block
+        size 65px
+        background-image url("../images/bg/icon_function.png")
+        background-repeat no-repeat
+
+      for type, index in connect manage user warning longrange upgrade collect excavate
+        offset-y= -80px * index
+        .icon-{type}
+          background-position 0 offset-y
+
+// 物联网服务
+.main-service
+  text-align center
+  background-color #f3f3f3
+  h3
+    @extend $main-h3
+
+  ul
+    reset-list()
+    clearfix()
+
+    li
+      float left
+      width 204px
+      height 225px
+      padding 0 18px
+
+      i
+        display inline-block
+        size 101px
+        background-image url("../images/bg/icon_service.png")
+        background-repeat no-repeat
+
+      for type, index in lowcost netural netural oneforone
+        y= -110px * index
+        .icon-{type}
+          background-position 0 y
+
+// 免费开通
+.main-opening
+  background-color red
+  text-align center
+  color #FFF
+  padding 26px 0
+  clearfix()
+
+  .mr70
+     margin-right 70px
+
+  .mr60
+    margin-right 60px
+
+  .mr30
+    margin-right 30px
+
+  .sec
     float left
-    width 65px
-    height 101px
-    padding 0 30px
+    display inline-block
+    height 58px
+    line-height 58px
 
-    i
-      display inline-block
-      size 65px
-      background-image url("../images/bg/icon_function.png")
-      background-repeat no-repeat
+    span
+      font-size 20px
 
-    for type, index in connect manage user warning longrange upgrade collect excavate
-      offset-y= -80px * index
-      .icon-{type}
-        background-position 0 offset-y
+    em
+      font-size 30px
+      font-style normal
+
+    .btn-lg
+      float left
+      color #fff !important
+      padding 0 44px
+
+//云智易物联平台
+.main-cooperation
+  background-color #f3f3f3
+  text-align center
+  clearfix()
+
+  h3
+    @extend $main-h3
+
+  p
+    @extend $main-p
+
+  .container
+     width 985px
+
+  .customer
+    img
+      float left
+      margin 0px 7px 7px 0
+
 
 
 
