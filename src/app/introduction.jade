@@ -1,0 +1,92 @@
+---
+page_title: "平台介绍"
+stylesheets: ["introduction"]
+body_class: ["introduction-page"]
+intro_nav:
+  -
+    anchor: "platform-summary"
+    label: "平台概览"
+  -
+    anchor: "platform-structure"
+    label: "平台架构"
+  -
+    anchor: "cloud-device"
+    label: "基础云设施"
+  -
+    anchor: "app-structure"
+    label: "应用端架构"
+  -
+    anchor: "fuction-modules"
+    label: "功能模块"
+  -
+    anchor: "service-modules"
+    label: "服务模块"
+  -
+    anchor: "advantages"
+    label: "我们的优势"
+  -
+    anchor: "app-sdk"
+    label: "APP SDK"
+  -
+    anchor: "embeded-sdk"
+    label: "嵌入式SDK"
+---
+
+extends _layout
+
+block content
+  .banner
+    .cont
+      h2 平台介绍
+      h3 服务更多智能设备，为智能设备提供更多服务
+
+  // Start: 内容导航
+  nav.intro-nav
+    each link, index in intro_nav
+      a(href="##{link.anchor}")= link.label
+      unless index == intro_nav.length - 1
+        i |
+  // End: 内容导航
+
+  .section-group
+    .container
+      .section#platform-summary
+        .section-hd 平台概览
+        .section-bd 平台概览描述
+      .section#platform-structure
+        .section-hd 平台架构
+        .section-bd 平台架构描述
+      .section#app-structure
+        .section-hd 应用端架构
+        .section-bd 应用端架构描述
+
+  .section-group.section-group-even
+    .container
+      .section#fuction-modules
+        .section-hd 功能模块
+        .section-bd 功能模块描述
+      .section#service-modules
+        .section-hd 服务模块
+        .section-bd 服务模块描述
+
+  .section-group
+    .container
+      .section#advantages
+        .section-hd 我们的优势
+        .section-bd 我们的优势描述
+
+  .section-group.section-group-even
+    .container
+      .section#app-sdk
+        .section-hd APP SDK
+        .section-bd APP SDK描述
+
+  .section-group
+    .container
+      .section#embeded-sdks
+        .section-hd 嵌入式SDK
+        .section-bd 嵌入式SDK描述
+
+
+block scripts
+  script(src="#{current.base}scripts/app.js")
