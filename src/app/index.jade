@@ -2,19 +2,48 @@
 page_title: "首页"
 stylesheets: ["index"]
 body_class: ["home-page"]
+functions:
+  -
+    icon: "connect"
+    label: "设备连接"
+  -
+    icon: "manage"
+    label: "设备管理"
+  -
+    icon: "user"
+    label: "用户管理"  
+  -
+    icon: "warning"
+    label: "告警服务"
+  -
+    icon: "longrange"
+    label: "远程诊断"
+  -
+    icon: "upgrade"
+    label: "固件升级"
+  -
+    icon: "collect"
+    label: "数据收集"
+  -
+    icon: "excavate"
+    label: "数据挖掘"
 services:
   -
-    title: "1111"
-    desc: "desc11111"
+    icon: "lowcost"
+    label: "快速&低成本"
+    desc: "您最快只需1周时间，成本低至30％，即可让产品实现智能互联， 使用上成熟的已大规模商用的物联平台"
   -
-    title: "1111"
-    desc: "desc11111"
+    icon: "netural"
+    label: "中立&开放"
+    desc: "已对接微信、Google Nest、Homekit平台实现智能互联，支持您的业务系统对接，实现业务运营升级"
   -
-    title: "1111"
-    desc: "desc11111"
+    icon: "backport"
+    label: "全球化后端"
+    desc: "无论您的产品和用户身处何处，均可得到可靠的云端服务，全球化的部署支持，涵盖亚太、北美/南美、欧洲等热点区"
   -
-    icon: "link"
-    label: "desc11111"
+    icon: "oneforone"
+    label: "一对一服务"
+    desc: "企业级定制化方案能力，百人专业培训的应用"
 ---
 
 extends _layout
@@ -22,7 +51,48 @@ extends _layout
 block content
   .banner
 
-  .adfasf
-
+  // Start: 智能化时代
+  .main-smart
+    .container
+      h3 从容应对智能化时代
+      p 
+        | 您只需，专注于您的产品创新，云智易为您提供强有力、全方位的云平台和技术支持，
+        br
+        | 贴心满足各行各业的物联网+ 需求，助您先智于人
+      ul.smart-icons
+        each item in functions
+          li: span= item.label
+  // End: 智能化时代
+  // Start: 物联网服务
+  .main-service
+    .container
+      h3 提供专业的物联网+服务
+      ul.service-icons
+        each list in services
+          li: span= list.label
+              p= list.desc
+  // End: 物联网服务            
+  // Start: 免费开通
+  .main-opening
+    .container
+      .sec
+        span 企业
+        em 5000+
+      .sec
+        span 服务设备量
+        em 750万+
+      .sec
+        span 每天消息发送量
+        em 1600万+
+      .sec
+        a(href="#")立即免费开通
+  // End: 免费开通
+  // Start: 云智易物联平台
+  .main-cooperation
+    .container
+      h3 5000+
+      p 超过5000家客户和合作伙伴信任、使用云智易物联平台
+      .customer
+  // End: 云智易物联平台
 block scripts
   script(src="#{current.base}scripts/app.js")
