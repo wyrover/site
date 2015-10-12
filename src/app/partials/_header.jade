@@ -1,2 +1,16 @@
 header.header
-  h1= site_name
+  h1.logo
+    a(href="/"): img(src="#{current.base}images/logo.png", alt="#{site_name}")
+
+  // Start: 主导航
+  nav.main-nav
+    ul
+      each link in main_nav
+        li: a(href="#{link.alias}.html")= link.label
+  // End: 主导航
+
+  // Start: 登录与注册
+  .head-actions
+    a.btn.btn-default.btn-sm.btn-pill(href="#") 登录
+    a.btn.btn-primary.btn-sm.btn-pill(href="#") 免费注册
+  // End: 登录与注册

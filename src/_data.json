@@ -1,4 +1,20 @@
 {
   "site_name": "云智易",
-  "html5": true
+  "html5": true,
+  "main_nav": [{
+    "label": "首页",
+    "alias": "home"
+  }, {
+    "label": "平台介绍",
+    "alias": "introduction"
+  }, {
+    "label": "解决方案",
+    "alias": "solutions"
+  }, {
+    "label": "开发者",
+    "alias": "developer"
+  }, {
+    "label": "客户案例",
+    "alias": "cases"
+  }]
 }
