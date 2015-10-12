@@ -66,7 +66,9 @@ block content
         | 贴心满足各行各业的物联网+ 需求，助您先智于人
       ul.smart-icons
         each item in functions
-          li: span= item.label
+          li
+            i(class="icon-#{item.icon}")
+            span= item.label
   // End: 智能化时代
 
   // Start: 物联网服务

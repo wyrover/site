@@ -53,7 +53,24 @@ $main-p
 
   ul
     reset-list()
+    clearfix()
 
+  li
+    float left
+    width 65px
+    height 101px
+    padding 0 30px
+
+    i
+      display inline-block
+      size 65px
+      background-image url("../images/bg/icon_function.png")
+      background-repeat no-repeat
+
+    for type, index in connect manage user warning longrange upgrade collect excavate
+      offset-y= -80px * index
+      .icon-{type}
+        background-position 0 offset-y
 
 
 
