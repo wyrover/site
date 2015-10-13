@@ -68,7 +68,7 @@ function_modules:
     title: "运营模块"
     desc: "用于设备及用户的延伸服务运营，包含内容运营等"
   -
-    icon: "more-plug"
+    icon: "more-plugin"
     title: "更多插件"
     desc: "菜谱管理、在线咨询、微信商城、售后服务管理等插件"
 
@@ -199,12 +199,13 @@ block content
   // End: 平台概览
 
   // Start: 应用端架构
-  .section#app-structure
+  .section-group
     .container
-      .section-hd 应用端架构
-      .section-bd
-        h3  支持WiFi、蓝牙单品接入，也支持网关模式的多设备接入。并且，内置智能链路策略，能够自适应内外网的连接方式，轻松满足多样化的应用场景。
-        img(src="#{current.base}images/application_frame.jpg")
+      .section#app-structure
+        .section-hd 应用端架构
+        .section-bd
+          h3  支持WiFi、蓝牙单品接入，也支持网关模式的多设备接入。并且，内置智能链路策略，能够自适应内外网的连接方式，轻松满足多样化的应用场景。
+          img(src="#{current.base}images/application_frame.jpg")
   // End: 应用端架构
 
   // Start: 功能模块
@@ -213,11 +214,11 @@ block content
       .section#fuction-modules
         .section-hd 功能模块
         .section-bd
-          .module
-            each item in function_modules
-                i(class="icon-#{item.icon}")
-                h4= item.title
-                p= item.desc
+          each item in function_modules
+            .module
+              i(class="icon-#{item.icon}")
+              h4= item.title
+              p= item.desc
   // End: 功能模块
 
   // Start: 我们的优势
