@@ -7,20 +7,11 @@ intro_nav:
     anchor: "platform-summary"
     label: "平台概览"
   -
-    anchor: "platform-structure"
-    label: "平台架构"
-  -
-    anchor: "cloud-device"
-    label: "基础云设施"
-  -
     anchor: "app-structure"
     label: "应用端架构"
   -
     anchor: "fuction-modules"
     label: "功能模块"
-  -
-    anchor: "service-modules"
-    label: "服务模块"
   -
     anchor: "advantages"
     label: "我们的优势"
@@ -31,7 +22,7 @@ intro_nav:
     anchor: "embeded-sdk"
     label: "嵌入式SDK"
 
-function_module:
+function_modules:
   -
     icon: "service-connect"
     title: "设备连接"
@@ -80,6 +71,106 @@ function_module:
     icon: "more-plug"
     title: "更多插件"
     desc: "菜谱管理、在线咨询、微信商城、售后服务管理等插件"
+
+our_advantages:
+  -
+    icon: "simple"
+    title: "简易"
+    desc: "快只需1周时间即可完成产品智能化，实现联网与控制"
+  -
+    icon: "matural"
+    title: "成熟"
+    desc: "云智易物联平台正在为全球超过750万台设备的提供服务"
+  -
+    icon: "safe"
+    title: "安全"
+    desc: "增强型SSL 128位加密方式，HMAC-MD5认证。安全白皮书"
+  -
+    icon: "performance"
+    title: "性能强"
+    desc: "轻量级协议数据包，低带宽、低MCU资源需求、低功耗"
+  -
+    icon: "opening"
+    title: "开放"
+    desc: "对接微信、Google Nest、Homekit、GoogleTread等"
+  -
+    icon: "compatible"
+    title: "兼容"
+    desc: "全面支持主流芯片高通、Marvel、MTK、Realtek等"
+  -
+    icon: "platform"
+    title: "跨平台"
+    desc: "Linux、Android、iOS、wifi、蓝牙、ZigBee、RF等"
+  -
+    icon: "globalization"
+    title: "全球化"
+    desc: "球化的部署支持，涵盖亚太、北美/南美、欧洲等热点区域"
+  -
+    icon: "service"
+    title: "服务能力"
+    desc: "一对一优质企业服务，支持企业行业化和个性化方案"
+  -
+    icon: "cost"
+    title: "成本低"
+    desc: "成本减低至30%，降低企业创新风险"
+  -
+    icon: "model"
+    title: "灵活模式"
+    desc: "公有云、私有云、混合云多种模式灵活选择"
+
+wifi_functions:
+  -
+    content: "支持SmartLink和微信Air Kiss，可通过APP一键配置"
+  -
+    content: "本地设备自动探测和扫描联网"
+  -
+    content: "内置云端连接服务，无需额外对接开发"
+  -
+    content: "支持智能链路选择策略、自动选择就近服务节点"
+  -
+    content: "支持内、外网网络自动检测和切换"
+  -
+    content: "支持数据采集，可自定义维度和指标"
+  -
+    content: "提供云端固件升级和远程配置、诊断和管理服务"
+  -
+    content: "支持设备安全认证和数据加密机制"
+
+integration_ways:
+  -
+    content: "支持SoC的C语言原生接口集成"
+  -
+    content: "支持串口透传的接口模式"
+
+app_scenes:
+  -
+    icon: "smart"
+    title: "智能照明"
+    desc: "轻量级协议数据包，低带宽"
+  -
+    icon: "family"
+    title: "家庭安防"
+    desc: "轻量级协议数据包，低带宽"
+  -
+    icon: "environment"
+    title: "环境监测"
+    desc: "轻量级协议数据包，低带宽"
+  -
+    icon: "source"
+    title: "家庭能源管控"
+    desc: "轻量级协议数据包，低带宽"
+  -
+    icon: "lighting"
+    title: "智能照明"
+    desc: "轻量级协议数据包，低带宽"
+  -
+    icon: "security"
+    title: "家庭安防"
+    desc: "轻量级协议数据包，低带宽"
+  -
+    icon: "monitor"
+    title: "环境监测"
+    desc: "轻量级协议数据包，低带宽"
   ---
 
 extends _layout
@@ -98,49 +189,104 @@ block content
         i |
   // End: 内容导航
 
+  // Start: 平台概览
   .section-group
     .container
       .section#platform-summary
         .section-hd 平台概览
         .section-bd
               img(src="#{current.base}images/platform.jpg")
-      //- .section#platform-structure
-      //-   .section-hd 平台架构
-      //-   .section-bd
+  // End: 平台概览
 
-      .section#app-structure
-        .section-hd 应用端架构
-        .section-bd
-          h6  支持WiFi、蓝牙单品接入，也支持网关模式的多设备接入。并且，内置智能链路策略，能够自适应内外网的连接方式，轻松满足多样化的应用场景。
-          img(src="#{current.base}images/application_frame.jpg")
+  // Start: 应用端架构
+  .section#app-structure
+    .container
+      .section-hd 应用端架构
+      .section-bd
+        h3  支持WiFi、蓝牙单品接入，也支持网关模式的多设备接入。并且，内置智能链路策略，能够自适应内外网的连接方式，轻松满足多样化的应用场景。
+        img(src="#{current.base}images/application_frame.jpg")
+  // End: 应用端架构
 
+  // Start: 功能模块
   .section-group.section-group-even
     .container
       .section#fuction-modules
         .section-hd 功能模块
-        .section-bd 功能模块描述
-      .section#service-modules
-        .section-hd 服务模块
-        .section-bd 服务模块描述
+        .section-bd
+          .module
+            each item in function_modules
+                i(class="icon-#{item.icon}")
+                h4= item.title
+                p= item.desc
+  // End: 功能模块
 
+  // Start: 我们的优势
   .section-group
     .container
       .section#advantages
         .section-hd 我们的优势
-        .section-bd 我们的优势描述
+        .section-bd
+          each item in our_advantages
+            i(class="icon-#{item.icon}")
+            h4= item.title
+            p= item.desc
+  // End: 我们的优势
 
+  // Start: APP SDK
   .section-group.section-group-even
     .container
       .section#app-sdk
         .section-hd APP SDK
-        .section-bd APP SDK描述
+        .section-bd
+          .app-service
+            i
+            h4 为简化厂商的APP开发，云智易提供了APP开发套件和相关的支持服务：
+            ul
+              li 提供APP的SDK和开发文档，兼容iOS、Android平以及HTML5嵌入式界面
+              li 提供APP端通用业务功能块的实例源代码，极大简化开发人员开发工作
+              li 为企业用户提供专业的技术支持服务
 
+          .app_function
+            i
+            h4 APP开发套件包含以下主要功能：
+            ul
+              li 自动扫描、发现可用设备
+              li 设备绑定接口
+              li 建立安全的本地和远程连接，以及心跳维持
+              li 智能链路功能，选择最优的数据通道
+              li 提供数据接收与发送的接口
+              li 提供底层网络和设备状态回调接口
+  // End: APP SDK
+
+  // Start: 嵌入式SDK
   .section-group
     .container
       .section#embeded-sdks
         .section-hd 嵌入式SDK
-        .section-bd 嵌入式SDK描述
+        .section-bd
+          h3 云智易提供嵌入式通讯模块，基于原生的C语言开发，为主流WiFi低功耗模组提供统一的编程接口
+          img(src="#{current.base}images/embedded_sdk.jpg")
+          ul.wifi_function
+            h4 云智易适配的WiFi芯片模块提供的功能包括：
+            each item in wifi_functions
+              li= item.content
 
+          ul.integration_way
+            h4 两种集成方式：
+            each item in integration_ways
+              li= item.content
+  // End: 嵌入式SDK
 
+  // Start: 应用场景
+  .section-group
+    .container
+      .section#application-scene
+        .section-hd 应用场景
+        .section-bd
+          each item in app_scenes
+            i(class="icon-#{item.icon}")
+            h4= item.title
+            p= item.desc
+  // End: 应用场景
 block scripts
   script(src="#{current.base}scripts/app.js")
