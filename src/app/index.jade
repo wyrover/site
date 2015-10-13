@@ -27,6 +27,7 @@ functions:
   -
     icon: "excavate"
     label: "数据挖掘"
+
 services:
   -
     icon: "lowcost"
@@ -44,6 +45,25 @@ services:
     icon: "oneforone"
     label: "一对一服务"
     desc: "企业级定制化方案能力，百人专业培训的应用"
+
+media_reports:
+  -
+    text: "容联咻咻验证码助力“饿了么”突围烧钱大战"
+    url: "#"
+  -
+    text: "容联云通讯发布IM Plus，创领最强即时通讯云"
+    url: "#"
+  -
+    text: "容联携数款语音产品助力PP租车 打造极致“租车”体验"
+    url: "#"
+  -
+    text: "做IM即时通讯先锋 容联云通讯打造用户无障碍沟通"
+    url: "#"
+  -
+    text: "互联网企业推广送“嘿嘿流量”是种怎样的体验？"
+    url: "#"
+
+
 ---
 
 extends _layout
@@ -116,6 +136,27 @@ block content
         img(src="#{current.base}images/brand_leedarson.jpg")
         img(src="#{current.base}images/brand_leedarson.jpg")
   // End: 云智易物联平台
+
+  // Start: 媒体报道
+  .main-media
+    .container
+      h4 媒体报道
+      ul.media-report
+        each item in media_reports
+          li
+            a(href="#{item.url}")= item.text
+      .media-pictures
+        .picture
+          a(href="#")
+           img(src="#{current.base}images/zulily.jpg")
+           span 阿里投资的电商 Zulily 是如何迅速
+        .picture
+          a(href="#")
+            img(src="#{current.base}images/googlex.jpg")
+            span 生命科学部门脱离 Google X
+
+
+  // End: 媒体报道
 
 block scripts
   script(src="#{current.base}scripts/app.js")

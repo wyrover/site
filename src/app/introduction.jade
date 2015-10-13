@@ -30,7 +30,57 @@ intro_nav:
   -
     anchor: "embeded-sdk"
     label: "嵌入式SDK"
----
+
+function_module:
+  -
+    icon: "service-connect"
+    title: "设备连接"
+    desc: "实时获取设备状态和数据，实现远程连接和控制"
+  -
+    icon: "service-inter"
+    title: "设备互联"
+    desc: "与其它设备或第三方平台，实现设备联动和监控"
+  -
+    icon: "service-manage"
+    title: "设备管理"
+    desc: "设备档案、在线状态、在线数量、激活时间等状态管理"
+  -
+    icon: "user-manage"
+    title: "用户管理"
+    desc: "对设备对应的多用户状态、行为进行管理与运营"
+  -
+    icon: "data-collect"
+    title: "数据采集"
+    desc: "支持自定义任意维度和指标的数据采集方式"
+  -
+    icon: "count-analysis"
+    title: "统计分析"
+    desc: "设备和用户行为实现统计、实时分析和离线分析"
+  -
+    icon: "msg-push"
+    title: "消息推送"
+    desc: "设备和用户信息营销下发，支持链接、文字等格式"
+  -
+    icon: "application-manage"
+    title: "应用管理"
+    desc: "设备对应的APP、Html5等应用的发布、更新等管理"
+  -
+    icon: "wanrning-service"
+    title: "告警服务"
+    desc: "包括检测项、检测点、告警规则等，自定义通知"
+  -
+    icon: "remote-diagnosis"
+    title: "远程诊断"
+    desc: "设备信息管理、远程诊断、远程调试、固件升级等"
+  -
+    icon: "operate-module"
+    title: "运营模块"
+    desc: "用于设备及用户的延伸服务运营，包含内容运营等"
+  -
+    icon: "more-plug"
+    title: "更多插件"
+    desc: "菜谱管理、在线咨询、微信商城、售后服务管理等插件"
+  ---
 
 extends _layout
 
@@ -52,13 +102,17 @@ block content
     .container
       .section#platform-summary
         .section-hd 平台概览
-        .section-bd 平台概览描述
-      .section#platform-structure
-        .section-hd 平台架构
-        .section-bd 平台架构描述
+        .section-bd
+              img(src="#{current.base}images/platform.jpg")
+      //- .section#platform-structure
+      //-   .section-hd 平台架构
+      //-   .section-bd
+
       .section#app-structure
         .section-hd 应用端架构
-        .section-bd 应用端架构描述
+        .section-bd
+          h6  支持WiFi、蓝牙单品接入，也支持网关模式的多设备接入。并且，内置智能链路策略，能够自适应内外网的连接方式，轻松满足多样化的应用场景。
+          img(src="#{current.base}images/application_frame.jpg")
 
   .section-group.section-group-even
     .container
