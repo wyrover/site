@@ -1,0 +1,116 @@
+//------------------------------
+//- 开发者页
+//------------------------------
+
+// 基础设置
+@import 'partials/_settings'
+
+// Nib
+@import 'nib'
+
+// 工具
+@import "partials/_utilities"
+
+// 占位符
+@import "partials/_placeholders"
+
+// 横幅
+.banner
+  background-image url("../images/bg/banner_developer.jpg")
+
+// 内容导航
+.intro-nav
+  font-size 0
+  text-align center
+  padding 22px
+  background #F7F9FB
+
+  a
+  i
+    display inline-block
+    line-height 30px
+
+  i
+    font-size 20px
+    color #D2D2D2
+    margin 0 30px
+
+  a
+    font-size 16px
+    color #727272
+
+// 内容
+.section-group
+  background #FFF
+  padding-top 40px
+
+  .section
+    padding-bottom 100px
+    padding-top 40px
+
+  .section-hd
+    font-size 24px
+    border-left 4px solid red
+    padding-left 10px
+    height 28px
+    line-height 28px
+
+.section-bd
+    padding-top 20px
+
+.section-group-even
+  background #F7F9FB
+
+
+//开发者下载
+#developer-download
+  .section-bd
+    clearfix()
+
+    .download
+      float left
+      width 320px
+      text-align center
+
+      i
+        display inline-block
+        size 120px
+        background-image url("../images/bg/icon_developer.png")
+        background-repeat no-repeat
+
+      for type,index in document app mcu
+        offset-y= -150px * index
+        .icon-{type}
+          background-position 0 offset-y
+
+      h4
+        color #393939
+        font-size 18px
+        font-weight bold
+
+      p
+        font-size 12px
+        color #535353
+
+      a
+        font-size 12px
+        color red
+        margin-right 20px
+
+//开发者下载
+
+//开发板
+.developer-demoboard
+    background #f6f6f6
+
+    #developer-demoboard
+      h4
+        font-size 16px
+        color #737373
+
+      .demoboard
+        text-align center
+
+        img
+          padding 120px 0
+//开发板

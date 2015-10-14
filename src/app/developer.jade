@@ -1,0 +1,71 @@
+---
+page_title: "开发者"
+stylesheets: ["developer"]
+body_class: ["developer-page"]
+downloads:
+  -
+    icon: "document"
+    title: "开发文档"
+    desc: "您最快只需1周时间，成本低至30％"
+    links:
+      -
+        text: "开发者文档"
+        url: "#"
+  -
+    icon: "app"
+    title: "APP SDK下载"
+    desc: "您最快只需1周时间，成本低至30％"
+    links:
+      -
+        text: "IOS SDK"
+        url: "#"
+      -
+        text: "Anriod SDK"
+        url: "#"
+  -
+    icon: "mcu"
+    title: "MCU SDK下载"
+    desc: "您最快只需1周时间，成本低至30％"
+    links:
+      -
+        text: "MCU SDK下载"
+        url: "#"
+  ---
+
+extends _layout
+
+block content
+  .banner
+    .cont
+      h2 接入云智易平台
+      h3 云智易平台为合作伙伴和开发者提供了相关的SDK、开发文档以及开发板，让接入更加轻松、简单、快捷
+
+  // Start:
+  .section-group
+    .container
+      .section#developer-download
+        .section-bd
+          each item in downloads
+            .download
+              i(class="icon-#{item.icon}")
+              h4= item.title
+              p= item.desc
+              .actions
+                each a in item.links
+                  a(href="##{a.url}")= a.text
+  // End: 开发者下载
+
+  // Start: 开发板
+  .section-group.developer-demoboard
+    .container
+      .section#developer-demoboard
+        .section-hd 云智易开发板
+        .section-bd
+          h4 云智易开发板可适配多个厂商的WIFI模组，板载温湿度传感器、三色灯、红外转码器、光敏传感器、测试电机等部件，并且内置了云智易通讯SDK模块，可以满足绝大部分应用场景的开发需求。
+          .demoboard
+              img(src="#{current.base}images/demoboard.jpg")
+          .demoboard
+              a.btn.btn-primary.btn-lg(href="#") 了解详情
+  // End: 开发板
+block scripts
+  script(src="#{current.base}scripts/app.js")
