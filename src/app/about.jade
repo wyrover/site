@@ -1,0 +1,42 @@
+---
+page_title: "关于我们"
+stylesheets: ["about"]
+body_class: ["about-page"]
+---
+
+extends _layout
+
+block content
+  .banner
+    .cont
+      h2 关于我们
+
+  // Start:
+  .section-group
+    .container
+      .section#developer-download
+        .section-bd
+          each item in downloads
+            .download
+              i(class="icon-#{item.icon}")
+              h4= item.title
+              p= item.desc
+              .actions
+                each a in item.links
+                  a(href="##{a.url}")= a.text
+  // End: 开发者下载
+
+  // Start: 开发板
+  .section-group.developer-demoboard
+    .container
+      .section#developer-demoboard
+        .section-hd 云智易开发板
+        .section-bd
+          h4 云智易开发板可适配多个厂商的WIFI模组，板载温湿度传感器、三色灯、红外转码器、光敏传感器、测试电机等部件，并且内置了云智易通讯SDK模块，可以满足绝大部分应用场景的开发需求。
+          .demoboard
+              img(src="#{current.base}images/demoboard.jpg")
+          .demoboard
+              a.btn.btn-primary.btn-lg(href="#") 了解详情
+  // End: 开发板
+block scripts
+  script(src="#{current.base}scripts/app.js")
