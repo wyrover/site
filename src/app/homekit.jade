@@ -1,0 +1,58 @@
+---
+page_title: "Homekit方案"
+stylesheets: ["homekit"]
+body_class: ["homekit-page"]
+cases:
+-
+  name: "deerma"
+  img: "deerma"
+  title: "德尔玛"
+  summary: "德尔玛（DEERMA）电器有限公司精准定位于“空气质量改善类电器专家”、“清洁、蒸汽类电器专家”的战略高度，以创新的经营策略，坚持走“创意、时尚、高科、高效”的产品路线，致力于向全球范围供应时尚、创意且高性比的生活电器。其产品销售量在京东、阿里等电商平台中稳居品类第一。"
+  descs:
+    -
+      text: "云智易为德尔玛旗下智能化生活家电产品提供云平台和软件服务，快速实现德尔玛加湿器、健康秤等产品的快速创新，并快速对接微信等公共平台，辅助德尔玛进行运营。"
+  ---
+
+extends _layout
+
+block content
+  .banner
+    .cont
+      h2 Homekit方案
+
+  // Start: Homekit方案
+  .section-group
+    .container
+      .section#solution-homekit
+        .section-hd Homekit方案
+        .section-bd
+          h4 Siri控制WiF灯开关操作
+          .homekit
+            ul.homekit-dialog
+              li Homekit智能家居平台使得手机用户通过手机即可控制个人的智能家居，可以通过Siri发出操控指令，遥控车库门、电灯或者是安全摄像头的开关。HomeKit平台将允许你通过iOS设备控制联网家用电器产品，能够将iPhone或iPad转化成恒温器、灯光、车库门或门锁等众多智能家居设备的命令系统。
+              li 智能家居平台HomeKit开放的API接口，可以实现对第三方平台或设备互通互联。如实现不同平台下对锁、灯光、视频监控、门窗、温控器、插座等设备的控制；可实现对智能家居网关数据对接，按照场景模式控制单个或多个设备。
+              li 云智易利用Apple最新的homeKit技术协助厂商开发面向全球的物联网新产品。
+
+            .homekit-img
+              img(src="#{current.base}images/homekit.jpg")
+  // End: Homekit方案
+
+  // Start: 合作案例
+  .section-group.solution-case
+    .container
+      .section#solution-case
+        .section-hd 合作案例
+        .section-bd
+          each item in cases
+            .case
+              div(class="img-#{item.name}")
+                img(src="#{current.base}images/#{item.img}.jpg")
+              div(class="dialog-#{item.name}")
+                h4= item.title
+                p= item.summary
+                ul
+                  each lis in item.descs
+                    li= lis.text
+  // End: 合作案例
+block scripts
+  script(src="#{current.base}scripts/app.js")

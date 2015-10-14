@@ -1,0 +1,101 @@
+---
+page_title: "微信方案"
+stylesheets: ["wechat"]
+body_class: ["wechat-page"]
+cases:
+-
+  name: "deerma"
+  img: "deerma"
+  title: "德尔玛"
+  summary: "德尔玛（DEERMA）电器有限公司精准定位于“空气质量改善类电器专家”、“清洁、蒸汽类电器专家”的战略高度，以创新的经营策略，坚持走“创意、时尚、高科、高效”的产品路线，致力于向全球范围供应时尚、创意且高性比的生活电器。其产品销售量在京东、阿里等电商平台中稳居品类第一。"
+  descs:
+    -
+      text: "云智易为德尔玛旗下智能化生活家电产品提供云平台和软件服务，快速实现德尔玛加湿器、健康秤等产品的快速创新，并快速对接微信等公共平台，辅助德尔玛进行运营。"
+applications:
+  -
+    icon: "store"
+    title: "微信小店:"
+    desc: "包括添加商品、商品管理、订单管理、货架管理、维权等功能。根据设备运行情况，定期提供配件、耗材的购买服务，为用户提供更好的售后服务体验。"
+  -
+    icon: "shop"
+    title: "在线商城:"
+    desc: "利用微信社交元素功能，朋友圈分享设备、用户数据信息，如健康运动排名、使用体验等，直接在微信商城购买产品。"
+  -
+    icon: "card"
+    title: "微信卡券:"
+    desc: "支持开发者调用接口创建多种类型的卡券，通过下发消息、二维码、JS-SDK等方式进行投放，在用户使用时通过API接口或卡 券商户助手完成核销。"
+  -
+    icon: "pay"
+    title: "微信支付:"
+    desc: "集成微信便捷支付方式，用户线上体验提升。"
+  -
+    icon: "custom"
+    title: "售后客服:"
+    desc: "通过微信工具，开拓售后服务新模式。"
+  ---
+
+extends _layout
+
+block content
+  .banner
+    .cont
+      h2 微信方案
+
+  // Start: 微信方案
+  .section-group
+    .container
+      .section#solution-wechat
+        .section-hd 微信方案
+        .section-bd
+          .wechat-question
+            h4 1、什么是微信智能硬件？
+            p 微信公众服务号的设备功能是建立在微信硬件平台之上物联网解决方案。硬件设备厂商通过服务号，按照规定的连接协议如蓝牙、WIFI方式，将用户与其拥有的智能设备相连，完成设备、人、服务三者的连接。
+            h4 2、为什么需要接入微信？
+            p 借助微信拥有完善的ID体系、庞大的活跃用户群体、结合标准微信JSAPI、API接口，基于Html5界面开发，为第三方提供轻应用的开发方案。
+            p 同时微信设备功能可简化第三方的接入云，丰富了O2O功能，对于硬件产品提供了增值服务，包括社交元素、模式识别等。可以为用户提供更多的服务，以提升对用户的粘性
+            h4 3、如何对接：
+            p （1） 蓝牙设备接入技术架构：
+            p.wechat-answer 蓝牙设备的架构是“设备—微信—微信公众号后台—云智易后台”。通过实现微信蓝牙协议“AirSync”，设备能够连接微信并通过微信与云智易后台进行通讯。
+            p （2）WiFi设备接入技术架构：
+            p.wechat-answer 对于WIFI设备，架构是“设备—云智易后台—微信公众号后台——微信”。信硬件平台为WIFI 设备提供了一套快捷配置上网的方案—AirKiss，设备直接与云智易后台进行通讯，并通过微信为用户提供服务。
+        .wechat-picture
+          img.wechat-picture-airsync(src="#{current.base}images/wechat_airsync.jpg")
+          img.wechat-picture-airkiss(src="#{current.base}images/wechat_airkiss.jpg")
+
+  // End: nest方案
+
+  // Start: 合作案例
+  .section-group.solution-case
+    .container
+      .section#solution-case
+        .section-hd 合作案例
+        .section-bd
+          each item in cases
+            .case
+              div(class="img-#{item.name}")
+                img(src="#{current.base}images/#{item.img}.jpg")
+              div(class="dialog-#{item.name}")
+                h4= item.title
+                p= item.summary
+                ul
+                  each lis in item.descs
+                    li= lis.text
+  // End: 合作案例
+
+  // Start: 微信应用方案
+  .section-group
+    .container
+      .section#application-case
+        .section-hd 微信应用方案
+        .section-bd
+          each item in applications
+            .wechat-case
+              i(class="icon-#{item.icon}")
+              .case-text
+                em= item.title
+                span= item.desc
+
+  // End: 微信应用方案
+
+block scripts
+  script(src="#{current.base}scripts/app.js")

@@ -1,0 +1,134 @@
+//------------------------------
+//- 智能生活家电解决方案页
+//------------------------------
+
+// 基础设置
+@import 'partials/_settings'
+
+// Nib
+@import 'nib'
+
+// 工具
+@import "partials/_utilities"
+
+// 占位符
+@import "partials/_placeholders"
+
+// 横幅
+.banner
+  background-image url("../images/bg/banner_instruction.jpg")
+
+// 内容导航
+.intro-nav
+  font-size 0
+  text-align center
+  padding 22px
+  background #F7F9FB
+
+  a
+  i
+    display inline-block
+    line-height 30px
+
+  i
+    font-size 20px
+    color #D2D2D2
+    margin 0 30px
+
+  a
+    font-size 16px
+    color #727272
+
+// 内容
+.section-group
+  background #FFF
+  padding-top 40px
+
+  .section
+    padding-bottom 100px
+    padding-top 40px
+
+  .section-hd
+    font-size 24px
+    border-left 4px solid red
+    padding-left 10px
+    height 28px
+    line-height 28px
+
+.section-bd
+    padding-top 20px
+
+.section-group-even
+  background #F7F9FB
+
+//智能生活家电方案
+#smart-plan
+  p
+    color #6A6A6A
+    font-size 16px
+
+//生活家电演变过程
+#evolution-process
+  clearfix()
+
+  for type in situation product operate
+    .process-{type}
+      h4
+        color white
+        text-align center
+        padding 15px 0
+
+    .process-situation
+      h4
+        background #5b9bd5
+
+    .process-product
+      h4
+        background #92d050
+
+    .process-operate
+      h4
+        background #ba011f
+
+
+
+//我们提供的能力
+
+
+//合作案例
+.solution-case
+  background #f6f6f6
+
+  .case
+    clearfix()
+    margin-top 90px
+
+    for type in deerma milknanny lifesmart aiyiji
+      .img-{type}
+        float left
+        padding-right 35px
+
+        img
+          size 163px
+
+      .dialog-{type}
+        float left
+        width 700px
+
+        h4
+          margin 0
+          font-size 22px
+          color #393939
+
+        p
+          font-size 14px
+          color #6a6a6a
+          margin-bottom 25px
+
+        li
+          font-size 14px
+          color #6a6a6a
+          margin-bottom 10px
+
+
+

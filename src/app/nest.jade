@@ -1,0 +1,56 @@
+---
+page_title: "nest方案"
+stylesheets: ["nest"]
+body_class: ["nest-page"]
+cases:
+-
+  name: "deerma"
+  img: "deerma"
+  title: "德尔玛"
+  summary: "德尔玛（DEERMA）电器有限公司精准定位于“空气质量改善类电器专家”、“清洁、蒸汽类电器专家”的战略高度，以创新的经营策略，坚持走“创意、时尚、高科、高效”的产品路线，致力于向全球范围供应时尚、创意且高性比的生活电器。其产品销售量在京东、阿里等电商平台中稳居品类第一。"
+  descs:
+    -
+      text: "云智易为德尔玛旗下智能化生活家电产品提供云平台和软件服务，快速实现德尔玛加湿器、健康秤等产品的快速创新，并快速对接微信等公共平台，辅助德尔玛进行运营。"
+  ---
+
+extends _layout
+
+block content
+  .banner
+    .cont
+      h2 nest方案
+
+  // Start: nest方案
+  .section-group
+    .container
+      .section#solution-nest
+        .section-hd nest方案
+        .section-bd
+          h4 nest温控器联动控制色温灯灯带
+          .nest
+            ul.nest-dialog
+              li 作为 Nest智能家居平台内产品在无需联网的情况下彼此互通，为了兼容更多硬件厂商核心产品，通过开放专门API接 第三方平台或者设备可与Nest产品交换数据，互通互联利用语音和动作等方式实现自动控制调节。
+              li  云智易还提供了连接Nest平台设备的技术，利用云智易的技术可以快速融入Nest平台产品体系，实现各种不同品牌的物联网产品相互无障碍沟通。比如，当房屋内一氧化碳含量变高，智能门锁就会自动锁定，不让用户进入到房屋中，同时自动报警。智能手表将可以调整和监控家庭温度，还将支持语音控制平台，用户只需说话即可进行调温，你还可以通过APP来监控你的朋友和家人在地图上的位置，当显示他们不在你家时，你可以关闭家里的空调以节约能源。
+            .homekit-img
+              img(src="#{current.base}images/nest.jpg")
+  // End: nest方案
+
+  // Start: 合作案例
+  .section-group.solution-case
+    .container
+      .section#solution-case
+        .section-hd 合作案例
+        .section-bd
+          each item in cases
+            .case
+              div(class="img-#{item.name}")
+                img(src="#{current.base}images/#{item.img}.jpg")
+              div(class="dialog-#{item.name}")
+                h4= item.title
+                p= item.summary
+                ul
+                  each lis in item.descs
+                    li= lis.text
+  // End: 合作案例
+block scripts
+  script(src="#{current.base}scripts/app.js")
