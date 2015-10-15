@@ -6,30 +6,30 @@ downloads:
   -
     icon: "document"
     title: "开发文档"
-    desc: "您最快只需1周时间，成本低至30％"
+    desc: "云智易平台提供了丰富的接口，将服务能力开放给上层应用和第三方系统"
     links:
       -
-        text: "开发者文档"
-        url: "#"
+        text: "浏览开发者文档"
+        url: "http://support.xlink.cn/"
   -
     icon: "app"
     title: "APP SDK下载"
-    desc: "您最快只需1周时间，成本低至30％"
+    desc: "云智易提供了Android和iOS平台的SDK和开发文档，协助开发者快速完成应用程序的接入"
     links:
       -
         text: "IOS SDK"
-        url: "#"
+        url: "http://support.xlink.cn/"
       -
         text: "Anriod SDK"
-        url: "#"
+        url: "http://support.xlink.cn/"
   -
     icon: "mcu"
     title: "MCU SDK下载"
-    desc: "您最快只需1周时间，成本低至30％"
+    desc: "基于云智易的无线通讯模块，厂商可以轻松实现与任意MCU的集成，为设备增加可连接的特性"
     links:
       -
         text: "MCU SDK下载"
-        url: "#"
+        url: "http://support.xlink.cn/"
 ---
 
 extends _layout
@@ -51,8 +51,8 @@ block content
               h4= item.title
               p= item.desc
               .actions
-                each a in item.links
-                  a(href="##{a.url}")= a.text
+                each link in item.links
+                  a(href="#{link.url}", target="_blank")= link.text
   // End: 开发者下载
 
   // Start: 开发板
@@ -65,5 +65,5 @@ block content
           .demoboard
               img(src="#{current.base}images/demoboard.jpg")
           .demoboard
-              a.btn.btn-primary.btn-lg(href="#") 了解详情
+              a.btn.btn-primary.btn-lg(href="http://support.xlink.cn/", target="_blank") 了解详情
   // End: 开发板

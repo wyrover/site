@@ -39,6 +39,7 @@ block content
   .banner
     .cont
       h2 微信方案
+      h3 通过微信平台实现对设备的连接控制管理，完成设备、人、服务的连接
 
   // Start: 微信方案
   .section-group
@@ -63,35 +64,35 @@ block content
 
   // End: nest方案
 
-  // Start: 合作案例
-  .section-group.solution-case
-    .container
-      .section#solution-case
-        .section-hd 合作案例
-        .section-bd
-          each item in cases
-            .case
-              .case-thumbs
-                img(src="#{current.base}images/#{item.img}.jpg")
-              .case-desc
-                h4= item.title
-                p= item.summary
-                ul
-                  each lis in item.descs
-                    li= lis.text
-  // End: 合作案例
-
-  //- Start: 微信应用方案
-    .section-group
+  //- Start: 合作案例
+    .section-group.section-group-even.solution-case
       .container
-        .section.application-case#application-case
-          .section-hd 微信应用方案
+        .section#solution-case
+          .section-hd 合作案例
           .section-bd
-            each item in applications
-              .wechat-case
-                i(class="icon-#{item.icon}")
-                .case-text
-                  em= item.title
-                  span= item.desc
+            each item in cases
+              .case
+                .case-thumbs
+                  img(src="#{current.base}images/#{item.img}.jpg")
+                .case-desc
+                  h4= item.title
+                  p= item.summary
+                  ul
+                    each lis in item.descs
+                      li= lis.text
+  //- End: 合作案例
 
-  //- End: 微信应用方案
+  // Start: 微信应用方案
+  .section-group.section-group-even
+    .container
+      .section.application-case#application-case
+        .section-hd 微信应用方案
+        .section-bd
+          each item in applications
+            .wechat-case
+              i(class="icon-#{item.icon}")
+              .case-text
+                em= item.title
+                span= item.desc
+
+  // End: 微信应用方案

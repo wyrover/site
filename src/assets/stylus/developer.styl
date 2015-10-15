@@ -28,7 +28,8 @@
 
     .download
       float left
-      width 320px
+      width 280px
+      margin 0 20px
       text-align center
 
       i
@@ -37,7 +38,7 @@
         background-image url("../images/bg/icon_developer.png")
         background-repeat no-repeat
 
-      for type,index in document app mcu
+      for type,index in document mcu app
         offset-y= -150px * index
         .icon-{type}
           background-position 0 offset-y
@@ -54,7 +55,7 @@
       a
         font-size 12px
         color red
-        margin-right 20px
+        margin 0 10px
 
 //开发者下载
 
