@@ -3,8 +3,10 @@
 //------------------------------
 
 .header
+  position relative
   height 86px
   background #FFF
+  z-index 10
 
   .logo
     margin 0
@@ -26,6 +28,7 @@
 
   li
     float left
+    position relative
 
     & > a
       line-height 86px
@@ -33,15 +36,41 @@
       font-size 16px
       color #393939
       padding 0 15px
+      background #FFF
+      transition background .3s
 
       &:hover
-        background #F8F8F8
         text-decoration none
+
+    &.current > a
+      color red !important
+
+    &.active > a
+      background #F1F1F1
+
+  .sub-menu
+    absolute left 50% top 70px
+    size 530px 149px
+    padding-left 25px
+    margin-left -277px
+    font-size 0
+    background #F1F1F1 url("../images/bg/split_line.png") repeat-y center top
+    overflow hidden
+    opacity 0
+
+    a
+      color #848484
+
+      &:hover
         color red
 
-    &.current
-      a
-        color red
+    .sub-link
+      display inline-block
+      font-size 14px
+      width 106px
+      margin-left 24px
+      line-height 75px
+
 
 // 登录与注册
 .head-actions

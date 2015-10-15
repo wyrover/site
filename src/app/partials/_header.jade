@@ -4,10 +4,17 @@ header.header
       a(href="/"): img(src="#{current.base}images/logo.png", alt="#{site_name}")
 
     // Start: 主导航
-    nav.main-nav
+    nav.main-nav#mainNav
       ul
         each link in main_nav
-          li: a(href="#{link.alias}.html")= link.label
+          li(class="#{link.alias == current.source ? 'current' : ''}")
+            a(href="#{link.alias}.html")= link.label
+            if link.subs
+              .sub-menu.hidden
+                each item in link.subs
+                  span.sub-link
+                    a(href="#{item.alias}.html")= item.label
+
     // End: 主导航
 
     // Start: 登录与注册

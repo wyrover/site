@@ -3,13 +3,33 @@
   "html5": true,
   "main_nav": [{
     "label": "首页",
-    "alias": "home"
+    "alias": "index"
   }, {
     "label": "平台介绍",
     "alias": "introduction"
   }, {
     "label": "解决方案",
-    "alias": "solutions"
+    "alias": "furnishing",
+    "subs": [{
+      "label": " 智能家居",
+      "alias": "furnishing"
+    }, {
+      "label": "生活家电",
+      "alias": "smart-life"
+    }, {
+      "label": "设备管理",
+      "alias": "device-management"
+    }, {
+      "label": "微信场景",
+      "alias": "wechat"
+    }, {
+      "label": "HomeKit",
+      "alias": "homekit"
+    }, {
+      "label": "nest",
+      "alias": "nest"
+    }, {
+    }]
   }, {
     "label": "开发者",
     "alias": "developer"
