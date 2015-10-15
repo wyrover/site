@@ -19,9 +19,11 @@ content_nav:
     anchor: "app-sdk"
     label: "APP SDK"
   -
-    anchor: "embeded-sdk"
+    anchor: "embeded-sdks"
     label: "嵌入式SDK"
-
+  -
+    anchor: "application-scene"
+    label: "应用场景"
 function_modules:
   -
     icon: "service-connect"
@@ -75,8 +77,8 @@ function_modules:
 our_advantages:
   -
     icon: "simple"
-    title: "简易"
-    desc: "快只需1周时间即可完成产品智能化，实现联网与控制"
+    title: "简易/低成本"
+    desc: "最快只需1周时间，成本减低至30%"
   -
     icon: "matural"
     title: "成熟"
@@ -90,9 +92,9 @@ our_advantages:
     title: "性能强"
     desc: "轻量级协议数据包，低带宽、低MCU资源需求、低功耗"
   -
-    icon: "opening"
-    title: "开放"
-    desc: "对接微信、Google Nest、Homekit、GoogleTread等"
+    icon: "service"
+    title: "服务能力"
+    desc: "一对一优质企业服务，支持企业行业化和个性化方案"
   -
     icon: "compatible"
     title: "兼容"
@@ -105,18 +107,6 @@ our_advantages:
     icon: "globalization"
     title: "全球化"
     desc: "球化的部署支持，涵盖亚太、北美/南美、欧洲等热点区域"
-  -
-    icon: "service"
-    title: "服务能力"
-    desc: "一对一优质企业服务，支持企业行业化和个性化方案"
-  -
-    icon: "cost"
-    title: "成本低"
-    desc: "成本减低至30%，降低企业创新风险"
-  -
-    icon: "model"
-    title: "灵活模式"
-    desc: "公有云、私有云、混合云多种模式灵活选择"
 
 wifi_functions:
   -
@@ -144,32 +134,28 @@ integration_ways:
 
 app_scenes:
   -
-    icon: "smart"
-    title: "智能照明"
-    desc: "轻量级协议数据包，低带宽"
-  -
     icon: "family"
-    title: "家庭安防"
+    title: "智能家居"
     desc: "轻量级协议数据包，低带宽"
   -
-    icon: "environment"
-    title: "环境监测"
+    icon: "life"
+    title: "智能生活家电"
     desc: "轻量级协议数据包，低带宽"
   -
-    icon: "source"
-    title: "家庭能源管控"
+    icon: "device"
+    title: "设备管理"
     desc: "轻量级协议数据包，低带宽"
   -
-    icon: "lighting"
-    title: "智能照明"
+    icon: "scene"
+    title: "微信场景"
     desc: "轻量级协议数据包，低带宽"
   -
-    icon: "security"
-    title: "家庭安防"
+    icon: "homekit"
+    title: "HomeKit"
     desc: "轻量级协议数据包，低带宽"
   -
-    icon: "monitor"
-    title: "环境监测"
+    icon: "nest"
+    title: "nest"
     desc: "轻量级协议数据包，低带宽"
 ---
 
@@ -195,7 +181,8 @@ block content
       .section.platform-summary#platform-summary
         .section-hd 平台概览
         .section-bd
-          img(src="#{current.base}images/platform.jpg")
+          .img-center
+            img(src="#{current.base}images/platform.png")
   // End: 平台概览
 
   // Start: 应用端架构
@@ -205,7 +192,8 @@ block content
         .section-hd 应用端架构
         .section-bd
           h3  支持WiFi、蓝牙单品接入，也支持网关模式的多设备接入。并且，内置智能链路策略，能够自适应内外网的连接方式，轻松满足多样化的应用场景。
-          img(src="#{current.base}images/application_frame.jpg")
+          .img-center
+            img(src="#{current.base}images/application_frame.png")
   // End: 应用端架构
 
   // Start: 功能模块
@@ -279,22 +267,24 @@ block content
         .section-hd 嵌入式SDK
         .section-bd
           h3 云智易提供嵌入式通讯模块，基于原生的C语言开发，为主流WiFi低功耗模组提供统一的编程接口
-
-          .embeded-img
-            img(src="#{current.base}images/embedded_sdk.jpg")
-
-          .embeded-block
-            ul.wifi-function
+          .embeded
+            .embeded-block
               h4 云智易适配的WiFi芯片模块提供的功能包括：
-              each item in wifi_functions
-                li
-                  span= item.content
-
-            ul.integration-way
+              ul.wifi-function
+                each item in wifi_functions
+                  li
+                    span= item.content
               h4 两种集成方式：
-              each item in integration_ways
-                li
-                  span= item.content
+              ul.integration-way
+                each item in integration_ways
+                  li
+                    span= item.content
+              .actions
+                a.btn.btn-primary.btn-lg(href="http://support.xlink.cn/" target="_blank") 了解详情
+
+            .embedded-img
+              img(src="#{current.base}images/embedded_sdk.png")
+              h6 云智易开发板
   // End: 嵌入式SDK
 
   // Start: 应用场景
@@ -307,5 +297,5 @@ block content
             .scenes
               i(class="icon-#{item.icon}")
               h4= item.title
-              p= item.desc
+              //- p= item.desc
   // End: 应用场景

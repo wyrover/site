@@ -22,7 +22,7 @@ content_nav:
     anchor: "service-model"
     label: "服务模式"
   -
-    anchor: "custom-case"
+    anchor: "solution-case"
     label: "客户案例"
 clouds:
   -
@@ -82,7 +82,7 @@ services:
         text: "按设备量接入量收费"
       -
         title: "成本低"
-        text: "无需投入iass费用和运维服务费用"
+        text: "无需投入IasS费用和运维服务费用"
       -
         title: "免费持续服务"
         text: "每台设备一次性缴费，无需续费"
@@ -94,19 +94,18 @@ services:
       -
         text: "购买服务器端基础套件和授权包"
       -
-        text: "可提供iass选型，部署和运维服务一条龙服务"
+        text: "可提供IasS选型，部署和运维服务一条龙服务"
   -
     icon: "saas_paas"
     desc:
       -
-        text: "先saas，到达一定规模后客户可选择转为pass"
+        text: "先SaaS，到达一定规模后客户可选择转为PasS"
       -
         text: "确保已发售设备的数据迁移，不影响客户使用"
       -
-        text: "前期按saas交费，后期购买"
+        text: "前期按SaaS交费，后期购买PasS套件和新增授权，已交费授权无需重复交费，可免费迁移"
 cases:
   -
-    name: "leedarson"
     img: "leedarson"
     title: "立达信智能照明/智能家居套装"
     summary: "立达信专注于电子节能灯、LED灯具、智能照明等绿色照明产品研发、生产及销售，立达信、海德信和立莱为旗下三大自主照明品牌，平均每月出货量不低于1000万只。"
@@ -116,7 +115,6 @@ cases:
       -
         text: "基于云智易平台，实现与Nest平台设备互联互通，打造了温度与照明联动控制，拓展了海外市场应用 。"
   -
-    name: "ast"
     img: "ast"
     title: "芯联智智能家居套装"
     summary: "微信智能家居系统采用zigbee连接方案，实现在微信端对zigbee网关、智能灯、插座、门磁、遥控器、报警器等一整套家庭设备的连接控制。"
@@ -128,7 +126,6 @@ cases:
       -
         text: "基于html5的形式，实现整套页面的调用。"
   -
-    name: "me"
     img: "me"
     title: "运营商 - 上海电信研究院"
     summary: "“悦me”是中国电信为智慧家庭用户提供的家庭信息化服务综合解决方案，悦me网关是智慧家庭的核心终端，该产品作为“光猫+智能路由器”的集合体，采用全新硬件、外观及智能网关操作系统，并集成丰富设备接口和智能应用，包括智能家居、智慧生活等；可满足中高端家庭用户未来智能化的需求。"
@@ -148,7 +145,9 @@ extends ../_layout
 block content
   .banner
     .cont
-      h2 智能家居云平台解决方案
+      h2
+        | 智能家居云平台
+        span 解决方案
       h3 应用场景包括：照明、电工、家庭安防、环境监测、家庭能源管控等
 
   // Start: 内容导航
@@ -162,32 +161,35 @@ block content
   // Start: 平台概览
   .section-group
     .container
-      .section#platform-summary
+      .section.platform-summary#platform-summary
         .section-hd 平台概览
         .section-bd
             h4 云智易智能家居业务 - 整体服务架构
-            img(src="#{current.base}images/furnishing/thumbs/furnishing_platform.jpg")
+            .img-center
+              img(src="#{current.base}images/furnishing/logos/furnishing_platform.jpg")
   // End: 平台概览
 
   // Start: 软件开发服务
-  .section-group
+  .section-group.software-service
     .container
       .section#software-service
         .section-hd 软件开发服务
         .section-bd
           .service
-            h3 硬件开发服务（网关&WiFi单品）
-            h4 云智易智能家居业务 - 整体服务架构
-            img(src="#{current.base}images/furnishing/thumbs/software_service.jpg")
-          .service
+            h3 硬件端开发服务（网关&WiFi单品）
+            h4 云智易提供灵活的应用端架构，支持WiFi单品接入，也支持网关模式的多设备接入。并内置智能链路策略，能够自适应内外网的连接方式，轻松满足多样化的应用场景。
+            .img-center
+              img(src="#{current.base}images/furnishing/logos/software_service.png")
+          .service.app_service
             h3 APP开发服务
-            img(src="#{current.base}images/furnishing/thumbs/app_service.jpg")
+             .img-center
+                img(src="#{current.base}images/furnishing/logos/app_service.png")
   // End: 软件开发服务
 
   // Start: 云端服务
   .section-group
     .container
-      .section#cloud-service
+      .section.cloud-service#cloud-service
         .section-hd 云端服务
         .section-bd
           each item in clouds
@@ -199,48 +201,54 @@ block content
   // End: 云端服务
 
   // Start: 芯片对接服务
-  .section-group
+  .section-group.chip-service
     .container
       .section#chip-service
         .section-hd 芯片对接服务
         .section-bd
           .chip
             h4 多协议支持
-            p 云智易提供成熟、兼容性强的嵌入式通讯模块，无论是做WiFi、BLE智能单品，还是采用Zigbee、RF或ZWave协议的网关，可以任意选择适合您的Iot芯片：
+            p 云智易提供成熟、兼容性强的嵌入式通讯模块，无论是WiFi、BLE智能单品，还是采用Zigbee、RF或ZWave协议的网关，可以任意选择适合您的IOT芯片
           .chip
             h4 多芯片支持
-            img(src="#{current.base}images/furnishing/thumbs/chip_support.jpg")
+            .img-center
+              img(src="#{current.base}images/furnishing/logos/chip_support.png")
   // End: 芯片对接服务
 
   // Start: 其他服务
-  .section-group
+  .section-group.other-service
     .container
       .section#other-service
         .section-hd 其他服务
         .section-bd
           .other
             h4 平台对接服务
-            img(src="#{current.base}images/furnishing/thumbs/platform_service.png")
-          .other
+            .img-center
+              img(src="#{current.base}images/furnishing/thumbs/platform_service.png")
+          .other.other-source
             h4 资源服务
-            img(src="#{current.base}images/furnishing/thumbs/source_service.png")
+            .img-center
+              img(src="#{current.base}images/furnishing/logos/source_service.png")
   // End: 其他服务
 
   // Start: 服务模式
-  .section-group
+  .section-group.service-model
     .container
       .section#service-model
         .section-hd 服务模式
         .section-bd
-          each item in services
-            .model
-              img(src="#{current.base}images/furnishing/logos/#{item.icon}.png")
+          each item,index in services
+            .model(class="#{ index == services.length - 1 ? 'last-item' : ''}")
+              .model-img
+                img(src="#{current.base}images/furnishing/thumbs/#{item.icon}.png")
               ul
                 each lis in item.desc
                   li
                     if lis.title
                       h6= lis.title
                     span= lis.text
+
+
 
   // End: 服务模式
 
@@ -252,9 +260,9 @@ block content
         .section-bd
           each item in cases
             .case
-              div(class="img-#{item.name}")
-                img(src="#{current.base}images/furnishing/logos/#{item.img}.jpg")
-              div(class="dialog-#{item.name}")
+              .case-thumbs
+                img(src="#{current.base}images/furnishing/thumbs/#{item.img}.png")
+              .case-desc
                 h4= item.title
                 p= item.summary
                 ul

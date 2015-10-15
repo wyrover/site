@@ -8,7 +8,10 @@ header.header
       ul
         each link in main_nav
           li(class="#{link.alias == current.source ? 'current' : ''}")
-            a(href="#{link.alias}.html")= link.label
+            if link.subs
+              span.top-lv= link.label
+            else
+              a.top-lv(href="#{link.alias}.html")= link.label
             if link.subs
               .sub-menu.hidden
                 each item in link.subs

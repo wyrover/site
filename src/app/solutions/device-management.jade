@@ -1,0 +1,163 @@
+---
+page_title: "设备管理方案"
+stylesheets: ["device-management"]
+body_class: ["device-management-page"]
+content_nav:
+  -
+    anchor: "device-plan"
+    label: "设备管理方案"
+  -
+    anchor: "supply-what"
+    label: "我们提供什么？"
+  -
+    anchor: "smart-helper"
+    label: "智能硬件帮助台"
+  -
+    anchor: "solution-case"
+    label: "合作案例"
+
+supplies:
+  -
+    icon: "remote-connect"
+    title: "远程连接"
+  -
+    icon: "device-management"
+    title: "设备管理"
+  -
+    icon: "user-management"
+    title: "用户管理"
+  -
+    icon: "msg-push"
+    title: "消息推送"
+  -
+    icon: "data-collect"
+    title: "数据采集"
+  -
+    icon: "count-analysis"
+    title: "统计分析"
+  -
+    icon: "wanrning-service"
+    title: "告警服务"
+  -
+    icon: "remote-diagnosis"
+    title: "远程诊断"
+cases:
+  -
+    img: "deerma"
+    title: "德尔玛"
+    summary: "德尔玛（DEERMA）电器有限公司精准定位于“空气质量改善类电器专家”、“清洁、蒸汽类电器专家”的战略高度，以创新的经营策略，坚持走“创意、时尚、高科、高效”的产品路线，致力于向全球范围供应时尚、创意且高性比的生活电器。其产品销售量在京东、阿里等电商平台中稳居品类第一。"
+    descs:
+      -
+        text: "云智易为德尔玛旗下智能化生活家电产品提供云平台和软件服务，快速实现德尔玛加湿器、健康秤等产品的快速创新，并快速对接微信等公共平台，辅助德尔玛进行运营。"
+  -
+    img: "milk_nanny"
+    title: "Milk Nanny冲奶机"
+    summary: "Milk Nanny智能冲奶机是一款可联网的自动冲奶机，支持联网搭配手机使用。在冲奶之前，在Milk Nanny的APP中输入了孩子出生日期，用APP扫描奶粉罐上的条形码，机器就自动为婴儿冲调合适的奶粉量。同时APP还可记录每天婴儿的饮食记录，帮助父母发现异常。"
+    descs:
+      -
+        text: "云智易为智能冲奶机提供了WiFi通讯联网固件，以及云平台的整体解决方案。"
+      -
+        text: "利用云智易的多平台互通技术，实现与海尔U+平台互通，扩充产品销售渠道，增强品牌效应。"
+      -
+        text: "将借力云平台的O2O服务资源，提升母婴行业服务能力。"
+  -
+    img: "life_smart"
+    title: "LifeSmart暖风机"
+    summary: "LifeSmart暖风机是一款基于wifi的智能暖风机设备，通过智能APP的控制终端实现对设备的定时开关机、暖风模式设定，温度设定以及实时采集环境温度达到节能的应用场景。"
+    descs:
+      -
+        text: "云智易为产品提供了APP数据端到云端解决方案。"
+      -
+        text: "基于云平台优势，实现设备内外网自动切换。"
+      -
+        text: "对接国外客户，产品交互设计依用户特征量身订做。"
+  -
+    img: "aiyiji"
+    title: "爱易记智能药盒"
+    summary: "爱易记药盒是一款基于蓝牙通讯，集APP与药盒为一体的智能药盒。提供智能监督、提醒用户服药、智能提示服药的相关活动及健康恢复的指导。希望在APP端接入医疗平台和社区连接的数据分析。"
+    descs:
+      -
+        text: "云智易为智能药盒提供了APP数据端到云端解决方案。"
+      -
+        text: "基于云平台优势，实现医疗服务导入，并借力平台的社区诊所，打造全新的销售渠道。"
+      -
+        text: " 积极利用平台内资源，在线咨询，O2O服务。"
+---
+
+extends ../_layout
+
+block content
+  .banner
+    .cont
+      h2
+        | 设备管理
+        span 解决方案
+
+  // Start: 内容导航
+  nav.content-nav
+    each link, index in content_nav
+      a(href="##{link.anchor}")= link.label
+      unless index == content_nav.length - 1
+        i |
+  // End: 内容导航
+
+  // Start: 设备管理方案
+  .section-group
+    .container
+      .section.device-plan#device-plan
+        .section-hd 设备管理方案
+        .section-bd
+          p 随着物联网时代的到来，智能设备产品突飞猛进的创新与发展，千亿台智能设备正接入到互联网中，形成了一个庞大的数据网络。由于智能设备联网接入数量在不断剧增，借助云计算技术也提供相应的云端物联IoT平台，实现了对智能设备的数据连接、数据采集、远程控制、设备管理的基本功能。
+          p 这场由技术发展催生的新的变革，由传统销售硬件设备时代向销售服务价值的转变。
+          .img-center
+            img(src="#{current.base}images/device-management/pics/device_plan.png")
+  // End: 设备管理方案
+
+  // Start: 我们提供什么？
+  .section-group.supply-what
+    .container
+      .section#supply-what
+        .section-hd 我们提供什么？
+        .section-bd
+          each item in supplies
+            .supply
+              .supply-icon
+                i(class="icon-#{item.icon}")
+              h4= item.title
+
+  // End: 我们提供什么？
+
+  // Start: 智能硬件帮助台
+  .section-group
+    .container
+      .section.smart-helper#smart-helper
+        .section-hd 智能硬件帮助台
+        .section-bd
+          p 云智易IoT平台的远程诊断服务，为智能硬件厂商提供设备的远程服务能力，同时能够很便捷地与第三方服务系统的集成。
+          p 智能硬件帮助台Smart HelpDesk，为厂商从单纯的设备制造商向产品＋服务的升级、转型提供了新的途径；即提升了服务成本效益，也创造了可持续的用户服务价值模式。系统架构如下：
+          .img-center
+            img(src="#{current.base}images/device-management/pics/smart_helper.png")
+          .smart_function
+            h4 功能包括
+            img(src="#{current.base}images/device-management/pics/smart_function.png")
+
+  // End: 智能硬件帮助台
+
+  // Start: 合作案例
+  .section-group.solution-case
+    .container
+      .section#solution-case
+        .section-hd 合作案例
+        .section-bd
+          each item in cases
+            .case
+              .case-thumbs
+                img(src="#{current.base}images/#{item.img}.jpg")
+              .case-desc
+                h4= item.title
+                p= item.summary
+                ul
+                  each lis in item.descs
+                    li
+                      span= lis.text
+  // End: 合作案例

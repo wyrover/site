@@ -1,0 +1,91 @@
+//------------------------------
+//- 设备管理方案页
+//------------------------------
+
+// 基础设置
+@import 'partials/_settings'
+
+// Nib
+@import 'nib'
+
+// 工具
+@import "partials/_utilities"
+
+// 占位符
+@import "partials/_placeholders"
+
+// 案例
+@import "partials/_case"
+
+//- 内容导航
+@import "partials/_content-nav"
+
+// 横幅
+.banner
+  background-image url("../images/bg/banner_instruction.jpg")
+
+  //设备管理方案
+.device-plan
+    p
+        color #6a6a6a
+        font-size 16px
+        text-indent 2em
+
+    img
+        margin 10px 0
+
+//我们提供什么
+.supply-what
+    background-color #f5f5f5
+
+    .section-bd
+        padding-top 50px
+        clearfix()
+
+        .supply
+            float left
+            width 100px
+            margin-right 20px
+
+            .supply-icon
+                width 100px
+                margin 0 auto
+                text-align center
+
+                i
+                    display inline-block
+                    size 55px
+                    background-image url("../images/bg/icon_device.png")
+                    background-repeat no-repeat
+
+                  for type, index in remote-connect device-management user-management msg-push data-collect count-analysis wanrning-service remote-diagnosis
+                    y= -80px * index
+                    .icon-{type}
+                        background-position 0 y
+
+            h4
+                color #393939
+                font-size 16px
+                text-align center
+
+//智能硬件帮助台
+.smart-helper
+
+    p
+        color #6a6a6a
+        font-size 16px
+        text-indent 2em
+
+    .img-center
+        margin 50px 0
+
+    .smart-function
+        border-top 1px solid #ebebeb
+        padding 50px 0
+
+        h4
+            color #393939
+            font-size 18px
+
+        img
+            padding 20px 0

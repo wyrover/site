@@ -25,37 +25,52 @@
   background-image url("../images/bg/banner_instruction.jpg")
 
 //智能生活家电方案
-#smart-plan
+.smart-plan
   p
     color #6A6A6A
     font-size 16px
+    padding-left 20px
 
 //生活家电演变过程
-#evolution-process
-  clearfix()
+.evolution-process
+  background-color #f5f5f5
 
-  for type in situation product operate
-    .process-{type}
-      h4
-        color white
-        text-align center
-        padding 15px 0
-
-    .process-situation
-      h4
-        background #5b9bd5
-
-    .process-product
-      h4
-        background #92d050
-
-    .process-operate
-      h4
-        background #ba011f
-
-
+  .img-center
+    margin-top 60px
 
 //我们提供的能力
+.supply-ability
+  .section-bd
+    clearfix()
 
+    .ability
+      float left
+      width 220px
+      margin-right 20px
+      margin-top 65px
 
+      h4
+        background-color #ba011f
+        color #fff
+        padding: 15px 0 15px 25px
+        margin 0
 
+      ul
+        reset-list()
+        height 185px
+        padding-left 10px
+        border 1px solid #e0e0e0
+
+        li
+          margin-top 20px
+          padding-left 20px
+          background-image url("../images/right.png")
+          background-repeat no-repeat
+
+          span
+            color #747474
+            font-size 14px
+
+//合作案例
+.solution-case
+  background-color #f5f5f5

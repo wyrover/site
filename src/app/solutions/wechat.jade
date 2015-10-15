@@ -4,7 +4,6 @@ stylesheets: ["wechat"]
 body_class: ["wechat-page"]
 cases:
   -
-    name: "deerma"
     img: "deerma"
     title: "德尔玛"
     summary: "德尔玛（DEERMA）电器有限公司精准定位于“空气质量改善类电器专家”、“清洁、蒸汽类电器专家”的战略高度，以创新的经营策略，坚持走“创意、时尚、高科、高效”的产品路线，致力于向全球范围供应时尚、创意且高性比的生活电器。其产品销售量在京东、阿里等电商平台中稳居品类第一。"
@@ -72,9 +71,9 @@ block content
         .section-bd
           each item in cases
             .case
-              div(class="img-#{item.name}")
+              .case-thumbs
                 img(src="#{current.base}images/#{item.img}.jpg")
-              div(class="dialog-#{item.name}")
+              .case-desc
                 h4= item.title
                 p= item.summary
                 ul
