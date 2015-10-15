@@ -11,32 +11,45 @@ block content
     .cont
       h2 关于我们
 
-  // Start:
+  // Start: 关于云智易
   .section-group
     .container
-      .section#developer-download
+      .section.about-xlink#about-xlink
+        .section-hd 关于云智易
         .section-bd
-          each item in downloads
-            .download
-              i(class="icon-#{item.icon}")
-              h4= item.title
-              p= item.desc
-              .actions
-                each a in item.links
-                  a(href="##{a.url}")= a.text
-  // End: 开发者下载
+          .orn
+            img(src="#{current.base}images/orn_about.png", alt="")
+          .cont
+            p 云智易最早于2010年开始服务于设备厂家，以设备M2M连接为产品起点，发展成为综合性的智能设备服务平台。
+            p 云智易的一站式解决方案，为设备厂家提供了从开发到运营的系列服务，包含硬件支持、软件开发、云平台、销售和O2O服务。
+            p 云智易由易居（中国）控股有限公司投资，并携手实惠O2O平台的等众多资源共同合作。
+            p 我们的理念是：服务更多智能设备，为智能设备提供更多服务。
+  // End: 关于云智易
 
-  // Start: 开发板
-  .section-group.developer-demoboard
+  // Start: 联系我们
+  .section-group.section-group-even
     .container
-      .section#developer-demoboard
-        .section-hd 云智易开发板
+      .section.contact-us#contact-us
+        .section-hd 联系我们
         .section-bd
-          h4 云智易开发板可适配多个厂商的WIFI模组，板载温湿度传感器、三色灯、红外转码器、光敏传感器、测试电机等部件，并且内置了云智易通讯SDK模块，可以满足绝大部分应用场景的开发需求。
-          .demoboard
-              img(src="#{current.base}images/demoboard.jpg")
-          .demoboard
-              a.btn.btn-primary.btn-lg(href="#") 了解详情
-  // End: 开发板
+          .orn
+            img(src="#{current.base}images/orn_map.png", alt="")
+          .cont
+            dl
+              dt 电话
+              dd
+                p
+                  span 020 - 89637760
+                  span 34397761
+              dt Email
+              dd
+                p bd@xlink.cn
+              dt 公司地址
+              dd
+                p 广州市海珠区聚德路299号龙腾18产业园2号楼221-228室（云智易）
+                p 上海市闸北区广延路383号秋实楼7层
+                p 杭州市西湖区杭大路9号聚龙大厦东15楼
+  // End: 联系我们
+
 block scripts
   script(src="#{current.base}scripts/app.js")

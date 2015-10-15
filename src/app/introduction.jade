@@ -2,7 +2,7 @@
 page_title: "平台介绍"
 stylesheets: ["introduction"]
 body_class: ["introduction-page"]
-intro_nav:
+content_nav:
   -
     anchor: "platform-summary"
     label: "平台概览"
@@ -171,7 +171,7 @@ app_scenes:
     icon: "monitor"
     title: "环境监测"
     desc: "轻量级协议数据包，低带宽"
-  ---
+---
 
 extends _layout
 
@@ -182,26 +182,26 @@ block content
       h3 服务更多智能设备，为智能设备提供更多服务
 
   // Start: 内容导航
-  nav.intro-nav
-    each link, index in intro_nav
+  nav.content-nav
+    each link, index in content_nav
       a(href="##{link.anchor}")= link.label
-      unless index == intro_nav.length - 1
+      unless index == content_nav.length - 1
         i |
   // End: 内容导航
 
   // Start: 平台概览
   .section-group
     .container
-      .section#platform-summary
+      .section.platform-summary#platform-summary
         .section-hd 平台概览
         .section-bd
-              img(src="#{current.base}images/platform.jpg")
+          img(src="#{current.base}images/platform.jpg")
   // End: 平台概览
 
   // Start: 应用端架构
   .section-group
     .container
-      .section#app-structure
+      .section.app-structure#app-structure
         .section-hd 应用端架构
         .section-bd
           h3  支持WiFi、蓝牙单品接入，也支持网关模式的多设备接入。并且，内置智能链路策略，能够自适应内外网的连接方式，轻松满足多样化的应用场景。
@@ -211,7 +211,7 @@ block content
   // Start: 功能模块
   .section-group.section-group-even
     .container
-      .section#fuction-modules
+      .section.fuction-modules#fuction-modules
         .section-hd 功能模块
         .section-bd
           each item in function_modules
@@ -225,7 +225,7 @@ block content
   // Start: 我们的优势
   .section-group
     .container
-      .section#advantages
+      .section.advantages#advantages
         .section-hd 我们的优势
         .section-bd
           each item in our_advantages
@@ -238,7 +238,7 @@ block content
   // Start: APP SDK
   .section-group.section-group-even
     .container
-      .section#app-sdk
+      .section.app-sdk#app-sdk
         .section-hd APP SDK
         .section-bd
           .app-service
@@ -275,7 +275,7 @@ block content
   // Start: 嵌入式SDK
   .section-group
     .container
-      .section#embeded-sdks
+      .section.embeded-sdks#embeded-sdks
         .section-hd 嵌入式SDK
         .section-bd
           h3 云智易提供嵌入式通讯模块，基于原生的C语言开发，为主流WiFi低功耗模组提供统一的编程接口
@@ -300,7 +300,7 @@ block content
   // Start: 应用场景
   .section-group
     .container
-      .section#application-scene
+      .section.application-scene#application-scene
         .section-hd 应用场景
         .section-bd
           each item in app_scenes
@@ -309,5 +309,6 @@ block content
               h4= item.title
               p= item.desc
   // End: 应用场景
+
 block scripts
   script(src="#{current.base}scripts/app.js")

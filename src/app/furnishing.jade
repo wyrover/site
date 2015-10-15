@@ -2,7 +2,7 @@
 page_title: "智能家居方案"
 stylesheets: ["furnishing"]
 body_class: ["furnishing-page"]
-intro_nav:
+content_nav:
   -
     anchor: "platform-summary"
     label: "平台概览"
@@ -21,7 +21,7 @@ intro_nav:
   -
     anchor: "custom-case"
     label: "客戶案例"
-  ---
+---
 
 extends _layout
 
@@ -32,133 +32,135 @@ block content
       h3 应用场景包括：照明、电工、家庭安防、环境监测、家庭能源管控等
 
   // Start: 内容导航
-  nav.intro-nav
-    each link, index in intro_nav
+  nav.content-nav
+    each link, index in content_nav
       a(href="##{link.anchor}")= link.label
-      unless index == intro_nav.length - 1
+      unless index == content_nav.length - 1
         i |
   // End: 内容导航
 
-  // Start: 平台概览
-  .section-group
-    .container
-      .section#platform-summary
-        .section-hd 平台概览
-        .section-bd
-            h4 云智易智能家居业务 - 整体服务架构
-            img(src="#{current.base}images/platform.jpg")
-  // End: 平台概览
+  //-
+    // Start: 平台概览
+    .section-group
+      .container
+        .section#platform-summary
+          .section-hd 平台概览
+          .section-bd
+              h4 云智易智能家居业务 - 整体服务架构
+              img(src="#{current.base}images/platform.jpg")
+    // End: 平台概览
 
-  // Start: 应用端架构
-  .section-group
-    .container
-      .section#app-structure
-        .section-hd 应用端架构
-        .section-bd
-          h3  支持WiFi、蓝牙单品接入，也支持网关模式的多设备接入。并且，内置智能链路策略，能够自适应内外网的连接方式，轻松满足多样化的应用场景。
-          img(src="#{current.base}images/application_frame.jpg")
-  // End: 应用端架构
+    // Start: 应用端架构
+    .section-group
+      .container
+        .section#app-structure
+          .section-hd 应用端架构
+          .section-bd
+            h3 支持WiFi、蓝牙单品接入，也支持网关模式的多设备接入。并且，内置智能链路策略，能够自适应内外网的连接方式，轻松满足多样化的应用场景。
+            img(src="#{current.base}images/application_frame.jpg")
+    // End: 应用端架构
 
-  // Start: 功能模块
-  .section-group.section-group-even
-    .container
-      .section#fuction-modules
-        .section-hd 功能模块
-        .section-bd
-          each item in function_modules
-            .module
-              i(class="icon-#{item.icon}")
-              .module-text
+    // Start: 功能模块
+    .section-group.section-group-even
+      .container
+        .section#fuction-modules
+          .section-hd 功能模块
+          .section-bd
+            each item in function_modules
+              .module
+                i(class="icon-#{item.icon}")
+                .module-text
+                  h4= item.title
+                  p= item.desc
+    // End: 功能模块
+
+    // Start: 我们的优势
+    .section-group
+      .container
+        .section#advantages
+          .section-hd 我们的优势
+          .section-bd
+            each item in our_advantages
+              .point
+                i(class="icon-#{item.icon}")
                 h4= item.title
                 p= item.desc
-  // End: 功能模块
+    // End: 我们的优势
 
-  // Start: 我们的优势
-  .section-group
-    .container
-      .section#advantages
-        .section-hd 我们的优势
-        .section-bd
-          each item in our_advantages
-            .point
-              i(class="icon-#{item.icon}")
-              h4= item.title
-              p= item.desc
-  // End: 我们的优势
+    // Start: APP SDK
+    .section-group.section-group-even
+      .container
+        .section#app-sdk
+          .section-hd APP SDK
+          .section-bd
+            .app-service
+              img(src="#{current.base}images/app_service.png")
+              .app-sdk-text
+                h4 为简化厂商的APP开发，云智易提供了APP开发套件和相关的支持服务：
+                ul
+                  li
+                    span 提供APP的SDK和开发文档，兼容iOS、Android平以及HTML5嵌入式界面
+                  li
+                    span 提供APP端通用业务功能块的实例源代码，极大简化开发人员开发工作
+                  li
+                    span 为企业用户提供专业的技术支持服务
 
-  // Start: APP SDK
-  .section-group.section-group-even
-    .container
-      .section#app-sdk
-        .section-hd APP SDK
-        .section-bd
-          .app-service
-            img(src="#{current.base}images/app_service.png")
-            .app-sdk-text
-              h4 为简化厂商的APP开发，云智易提供了APP开发套件和相关的支持服务：
-              ul
-                li
-                  span 提供APP的SDK和开发文档，兼容iOS、Android平以及HTML5嵌入式界面
-                li
-                  span 提供APP端通用业务功能块的实例源代码，极大简化开发人员开发工作
-                li
-                  span 为企业用户提供专业的技术支持服务
+            .app-function
+              img.app-img(src="#{current.base}images/app_function.png")
+              .app-sdk-text
+                h4 APP开发套件包含以下主要功能：
+                ul
+                  li
+                    span 自动扫描、发现可用设备
+                  li
+                    span 设备绑定接口
+                  li
+                    span 建立安全的本地和远程连接，以及心跳维持
+                  li
+                    span 智能链路功能，选择最优的数据通道
+                  li
+                    span 提供数据接收与发送的接口
+                  li
+                    span 提供底层网络和设备状态回调接口
+    // End: APP SDK
 
-          .app-function
-            img.app-img(src="#{current.base}images/app_function.png")
-            .app-sdk-text
-              h4 APP开发套件包含以下主要功能：
-              ul
-                li
-                  span 自动扫描、发现可用设备
-                li
-                  span 设备绑定接口
-                li
-                  span 建立安全的本地和远程连接，以及心跳维持
-                li
-                  span 智能链路功能，选择最优的数据通道
-                li
-                  span 提供数据接收与发送的接口
-                li
-                  span 提供底层网络和设备状态回调接口
-  // End: APP SDK
+    // Start: 嵌入式SDK
+    .section-group
+      .container
+        .section#embeded-sdks
+          .section-hd 嵌入式SDK
+          .section-bd
+            h3 云智易提供嵌入式通讯模块，基于原生的C语言开发，为主流WiFi低功耗模组提供统一的编程接口
 
-  // Start: 嵌入式SDK
-  .section-group
-    .container
-      .section#embeded-sdks
-        .section-hd 嵌入式SDK
-        .section-bd
-          h3 云智易提供嵌入式通讯模块，基于原生的C语言开发，为主流WiFi低功耗模组提供统一的编程接口
+            .embeded-img
+              img(src="#{current.base}images/embedded_sdk.jpg")
 
-          .embeded-img
-            img(src="#{current.base}images/embedded_sdk.jpg")
-
-          .embeded-block
-            ul.wifi-function
+            .embeded-block
               h4 云智易适配的WiFi芯片模块提供的功能包括：
-              each item in wifi_functions
-                li
-                  span= item.content
+              ul.wifi-function
+                each item in wifi_functions
+                  li
+                    span= item.content
 
-            ul.integration-way
               h4 两种集成方式：
-              each item in integration_ways
-                li
-                  span= item.content
-  // End: 嵌入式SDK
+              ul.integration-way
+                each item in integration_ways
+                  li
+                    span= item.content
+    // End: 嵌入式SDK
 
-  // Start: 应用场景
-  .section-group
-    .container
-      .section#application-scene
-        .section-hd 应用场景
-        .section-bd
-          each item in app_scenes
-            .scenes
-              i(class="icon-#{item.icon}")
-              h4= item.title
-              p= item.desc
-  // End: 应用场景
+    // Start: 应用场景
+    .section-group
+      .container
+        .section#application-scene
+          .section-hd 应用场景
+          .section-bd
+            each item in app_scenes
+              .scenes
+                i(class="icon-#{item.icon}")
+                h4= item.title
+                p= item.desc
+    // End: 应用场景
+
 block scripts
   script(src="#{current.base}scripts/app.js")

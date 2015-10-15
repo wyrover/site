@@ -1,0 +1,56 @@
+---
+page_title: "客户案例"
+stylesheets: ["case"]
+body_class: ["case-page"]
+cases:
+  -
+    thumb: "aaaa.jpg"
+    title: "xxxxx"
+    desc: [
+      "asdfasdf",
+      "dasfasdf"
+    ]
+    logos: ["xxx.jpg", "aewe.jpg"]
+  -
+    thumb: "aaaa.jpg"
+    title: "xxxxx"
+    desc: [
+      "asdfasdf",
+      "dasfasdf"
+    ]
+    logos: ["xxx.jpg", "aewe.jpg"]
+  -
+    thumb: "aaaa.jpg"
+    title: "xxxxx"
+    desc: [
+      "asdfasdf",
+      "dasfasdf"
+    ]
+    logos: ["xxx.jpg", "aewe.jpg"]
+---
+
+extends _layout
+
+block content
+  .banner
+    .cont
+      h2 客户案例
+
+  // Start: 案例列表
+  .case-list
+    ul
+      each item in cases
+        li
+          .thumb
+            img(src="#{item.thumb}", alt="")
+          h3= item.title
+          .desc
+            each paragraph in item.desc
+              p= paragraph
+          .logos
+            each logo in item.logos
+              img(src="#{logo}", alt="")
+  // End: 案例列表
+
+block scripts
+  script(src="#{current.base}scripts/app.js")
