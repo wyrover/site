@@ -81,17 +81,17 @@ block content
                     li= lis.text
   // End: 合作案例
 
-  // Start: 微信应用方案
-  .section-group
-    .container
-      .section.application-case#application-case
-        .section-hd 微信应用方案
-        .section-bd
-          each item in applications
-            .wechat-case
-              i(class="icon-#{item.icon}")
-              .case-text
-                em= item.title
-                span= item.desc
+  //- Start: 微信应用方案
+    .section-group
+      .container
+        .section.application-case#application-case
+          .section-hd 微信应用方案
+          .section-bd
+            each item in applications
+              .wechat-case
+                i(class="icon-#{item.icon}")
+                .case-text
+                  em= item.title
+                  span= item.desc
 
-  // End: 微信应用方案
+  //- End: 微信应用方案

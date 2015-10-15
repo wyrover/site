@@ -11,12 +11,12 @@ header.header
             if link.subs
               span.top-lv= link.label
             else
-              a.top-lv(href="#{link.alias}.html")= link.label
+              a.top-lv(href="/app/#{link.alias}.html")= link.label
             if link.subs
               .sub-menu.hidden
                 each item in link.subs
                   span.sub-link
-                    a(href="#{item.alias}.html")= item.label
+                    a(href="/app/#{link.alias}/#{item.alias}.html")= item.label
 
     // End: 主导航
 

@@ -21,9 +21,9 @@ content_nav:
   -
     anchor: "service-model"
     label: "服务模式"
-  -
-    anchor: "solution-case"
-    label: "客户案例"
+  #-
+    #anchor: "solution-case"
+    #label: "客户案例"
 clouds:
   -
     icon: "service-connect"
@@ -252,20 +252,20 @@ block content
 
   // End: 服务模式
 
-  // Start: 合作案例
-  .section-group.solution-case
-    .container
-      .section#solution-case
-        .section-hd 合作案例
-        .section-bd
-          each item in cases
-            .case
-              .case-thumbs
-                img(src="#{current.base}images/furnishing/thumbs/#{item.img}.png")
-              .case-desc
-                h4= item.title
-                p= item.summary
-                ul
-                  each lis in item.descs
-                    li= lis.text
-  // End: 合作案例
+  //- Start: 合作案例
+    .section-group.solution-case
+      .container
+        .section#solution-case
+          .section-hd 合作案例
+          .section-bd
+            each item in cases
+              .case
+                .case-thumbs
+                  img(src="#{current.base}images/furnishing/thumbs/#{item.img}.png")
+                .case-desc
+                  h4= item.title
+                  p= item.summary
+                  ul
+                    each lis in item.descs
+                      li= lis.text
+  //- End: 合作案例

@@ -12,9 +12,9 @@ content_nav:
   -
     anchor: "smart-helper"
     label: "智能硬件帮助台"
-  -
-    anchor: "solution-case"
-    label: "合作案例"
+  #-
+    #anchor: "solution-case"
+    #label: "合作案例"
 
 supplies:
   -
@@ -137,27 +137,27 @@ block content
           p 智能硬件帮助台Smart HelpDesk，为厂商从单纯的设备制造商向产品＋服务的升级、转型提供了新的途径；即提升了服务成本效益，也创造了可持续的用户服务价值模式。系统架构如下：
           .img-center
             img(src="#{current.base}images/device-management/pics/smart_helper.png")
-          .smart_function
+          .smart-function
             h4 功能包括
             img(src="#{current.base}images/device-management/pics/smart_function.png")
 
   // End: 智能硬件帮助台
 
-  // Start: 合作案例
-  .section-group.solution-case
-    .container
-      .section#solution-case
-        .section-hd 合作案例
-        .section-bd
-          each item in cases
-            .case
-              .case-thumbs
-                img(src="#{current.base}images/#{item.img}.jpg")
-              .case-desc
-                h4= item.title
-                p= item.summary
-                ul
-                  each lis in item.descs
-                    li
-                      span= lis.text
-  // End: 合作案例
+  //- Start: 合作案例
+    .section-group.solution-case
+      .container
+        .section#solution-case
+          .section-hd 合作案例
+          .section-bd
+            each item in cases
+              .case
+                .case-thumbs
+                  img(src="#{current.base}images/#{item.img}.jpg")
+                .case-desc
+                  h4= item.title
+                  p= item.summary
+                  ul
+                    each lis in item.descs
+                      li
+                        span= lis.text
+  //- End: 合作案例
