@@ -137,26 +137,32 @@ app_scenes:
     icon: "family"
     title: "智能家居"
     desc: "轻量级协议数据包，低带宽"
+    url: "furnishing.html"
   -
     icon: "life"
     title: "智能生活家电"
     desc: "轻量级协议数据包，低带宽"
+    url: "smart-life.html"
   -
     icon: "device"
     title: "设备管理"
     desc: "轻量级协议数据包，低带宽"
+    url: "device-management.html"
   -
     icon: "scene"
     title: "微信场景"
     desc: "轻量级协议数据包，低带宽"
+    url: "wechat.html"
   -
     icon: "homekit"
     title: "HomeKit"
     desc: "轻量级协议数据包，低带宽"
+    url: "homekit.html"
   -
     icon: "nest"
     title: "nest"
     desc: "轻量级协议数据包，低带宽"
+    url: "nest.html"
 ---
 
 extends _layout
@@ -294,8 +300,8 @@ block content
         .section-hd 应用场景
         .section-bd
           each item in app_scenes
-            .scenes
+            a.scenes(href="#{current.base}solutions/#{item.url}")
               i(class="icon-#{item.icon}")
-              h4= item.title
+              span= item.title
               //- p= item.desc
   // End: 应用场景

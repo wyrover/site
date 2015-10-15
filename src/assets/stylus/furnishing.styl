@@ -26,122 +26,122 @@
 
 //平台概览
 .platform-summary
-    h4
-        color #818181
-        font-size 18px
+  h4
+    color #818181
+    font-size 18px
 
 //软件开发服务
 .software-service
-    background-color #f3f3f3
+  background-color #f3f3f3
 
-    h3
-        color #343434
-        font-size 20px
+  h3
+    color #343434
+    font-size 20px
 
-    h4
-        color #737373
-        font-size 14px
+  h4
+    color #737373
+    font-size 14px
 
-    .img-center
-        padding 60px 0
+  .img-center
+    padding 60px 0 0
 
-    .app_service
-        border-top 1px solid #e1e1e1
-        padding-top 50px
+  .app_service
+    border-top 1px solid #e1e1e1
+    padding-top 50px
 
 //云端服务
 .cloud-service
+  clearfix()
+
+  .cloud
+    float left
+    width 480px
+    margin-top 25px
+    padding 5px 0
     clearfix()
 
-    .cloud
-        float left
-        width 480px
-        margin-top 25px
-        padding 25px 0
-        clearfix()
+    i
+      float left
+      display inline-block
+      size 40px
+      margin 10px
+      background-image url("../images/bg/icon_furnishing.png")
+      background-repeat no-repeat
 
-        i
-            float left
-            display inline-block
-            size 40px
-            margin 10px
-            background-image url("../images/bg/icon_furnishing.png")
-            background-repeat no-repeat
+     for type,index in service-connect service-inter service-manage user-manage data-collect count-analysis msg-push application-manage wanrning-service remote-diagnosis operate-module more-plugin
+        offset-y= -80px * index
+        .icon-{type}
+          background-position 0 offset-y
 
-         for type,index in service-connect service-inter service-manage user-manage data-collect count-analysis msg-push application-manage wanrning-service remote-diagnosis operate-module more-plugin
-                offset-y= -80px * index
-                .icon-{type}
-                    background-position 0 offset-y
+    .cloud-text
+      float left
 
-        .cloud-text
-            float left
+      h4
+        margin 0
+        color #BA011F
+        font-size 18px
 
-            h4
-                margin 0
-                color #BA011F
-                font-size 18px
-
-            p
-                color #343434
-                font-size 14px
+      p
+        color #343434
+        font-size 14px
 
 //芯片对接服务
 .chip-service
-    background-color #f3f3f3
+  background-color #f3f3f3
 
-    .chip
-        margin-bottom 70px
+  .chip
+    margin-bottom 70px
 
-        h4
-            color #343434
-            font-size 20px
+    h4
+      color #343434
+      font-size 20px
 
-        p
-            color #6a6a6a
-            font-size 14px
+    p
+      color #6a6a6a
+      font-size 14px
 
 //其他服务
 .other-service
-    .other
-        padding 80px 0
+  .other
+    padding 20px 0
 
-        h4
-            color #343434
-            font-size 20px
+    h4
+      color #343434
+      font-size 20px
 
-        .img-center
-            padding 40px 0
+    .img-center
+      padding 40px 0
 
-    .other-source
-        border-top 1px solid #e1e1e1
+  .other-source
+    border-top 1px solid #e1e1e1
 
 
 //服务模式
 .service-model
-    padding-bottom 80px
-    background-color #f3f3f3
-    clearfix()
+  padding-bottom 80px
+  background-color #f3f3f3
+  clearfix()
 
-    .model
-        float left
-        width 269px
-        height 338px
-        border-right 1px solid #e8e8e8
-        padding 30px 25px
+  .model
+    float left
+    width 269px
+    height 338px
+    border-right 1px solid #e8e8e8
+    padding 30px 25px
 
-        .model-img
-            text-align center
+    .model-img
+      text-align center
 
-        li
-            padding 20px 0
+    li
+      padding 20px 0
 
-            h6
-                margin 0
-                font-size 14px
-                color #6a6a6a
+      h6
+        margin 0
+        font-size 14px
+        color #6a6a6a
 
-            span
-                font-size 14px
-                color #858585
-    .last-item
-        border-right none
+      span
+        font-size 14px
+        color #858585
+  .last-item
+    border-right none

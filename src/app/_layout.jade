@@ -11,9 +11,9 @@ html
   head
     meta(charset="UTF-8")
     meta(http-equiv="x-ua-compatible", content="ie=edge")
-    title= site_name + '-' + page_title
-    meta(name="keyword", content="#{page_keyword || ''}")
-    meta(name="description", content="#{page_description || ''}")
+    title= site_name + ' | ' + page_title
+    meta(name="keyword", content="#{page_keyword || '智慧家庭、智慧社区、云服务、智能硬件服务平台、智能硬件、智能家居、云端服务、设备连接、设备管理、远程诊断、数据收集、数据分析、O2O、智慧社区、解决方案'}")
+    meta(name="description", content="#{page_description || '云智易为智能硬件厂商提供强有力、全方位的支持。包括模块、软件和云端平台，实现设备远程控制与连接，为智能硬件提供远程设备管理、设备诊断、固件升级、数据收集、数据存储和数据分析，并提供全新的销售渠道和O2O服务给智能硬件开发者'}")
     if mobile_page
       meta(name="HandheldFriendly", content="true")
       meta(name="MobileOptimized", content="320")
@@ -40,8 +40,13 @@ html
       block footer
         include partials/_footer
 
-    +modal({modals:modals})
+    //- Start: 浮层
+      +modal({modals:modals})
+    //- End: 浮层
 
     block scripts
       script(src="#{current.base}vendor/jquery.js")
       script(src="#{current.base}scripts/common.js")
+      .hidden
+        script.
+          var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254476747'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1254476747' type='text/javascript'%3E%3C/script%3E"));

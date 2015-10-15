@@ -1,6 +1,6 @@
 [{
   "input": "./src/assets/scripts/common.coffee",
   "output": "common.js",
-  "public": "./public/scripts",
-  "dist": "./dist/scripts"
+  "public": "./public/app/scripts",
+  "dist": "./dist/app/scripts"
 }]

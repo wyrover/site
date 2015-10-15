@@ -7,21 +7,21 @@ header.header
     nav.main-nav#mainNav
       ul
         each link in main_nav
-          li(class="#{link.alias == current.source ? 'current' : ''}")
+          li(class="#{link.alias == current.source || link.alias == current.path[1] ? 'current' : ''}")
             if link.subs
               span.top-lv= link.label
             else
-              a.top-lv(href="/app/#{link.alias}.html")= link.label
+              a.top-lv(href="#{current.base}#{link.alias}.html")= link.label
             if link.subs
               .sub-menu.hidden
                 each item in link.subs
                   span.sub-link
-                    a(href="/app/#{link.alias}/#{item.alias}.html")= item.label
+                    a(href="#{current.base}#{link.alias}/#{item.alias}.html")= item.label
 
     // End: 主导航
 
     // Start: 登录与注册
     .head-actions
-      a.btn.btn-default.btn-sm.btn-pill(href="#") 登录
-      a.btn.btn-primary.btn-sm.btn-pill(href="#") 免费注册
+      a.btn.btn-default.btn-sm.btn-pill(href="http://app.xlink.cn/register.html", target="_blank") 登录
+      a.btn.btn-primary.btn-sm.btn-pill(href="http://app.xlink.cn/register.html", target="_blank") 免费注册
     // End: 登录与注册
