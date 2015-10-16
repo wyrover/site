@@ -124,21 +124,8 @@ block content
       h3 500+
       p 超过500家客户和合作伙伴信任、使用云智易物联平台
       .customer
-        img(src="#{current.base}images/index/brands/1.png")
-        img(src="#{current.base}images/index/brands/2.png")
-        img(src="#{current.base}images/index/brands/3.png")
-        img(src="#{current.base}images/index/brands/4.png")
-        img(src="#{current.base}images/index/brands/5.png")
-        img(src="#{current.base}images/index/brands/6.png")
-        img(src="#{current.base}images/index/brands/7.png")
-        img(src="#{current.base}images/index/brands/8.png")
-        img(src="#{current.base}images/index/brands/9.png")
-        img(src="#{current.base}images/index/brands/10.png")
-        img(src="#{current.base}images/index/brands/11.png")
-        img(src="#{current.base}images/index/brands/12.png")
-        img(src="#{current.base}images/index/brands/13.png")
-        img(src="#{current.base}images/index/brands/14.png")
-        img(src="#{current.base}images/index/brands/15.png")
+        - for(var i=1; i <= 15; i++)
+          img(src="#{current.base}images/index/brands/#{i}.png")
 
   // End: 云智易物联平台
 
