@@ -13,7 +13,8 @@ $ ->
     menu.animate
       opacity: 0
       top: '76px'
-    , 200, ->
+    , 200
+    , ->
       menu.addClass 'hidden'
 
   focus = (menu) ->
