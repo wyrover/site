@@ -6,16 +6,16 @@
     "alias": "index"
   }, {
     "label": "平台介绍",
-    "alias": "introduction"
+    "alias": "platform"
   }, {
     "label": "解决方案",
     "alias": "solutions",
     "subs": [{
       "label": " 智能家居",
-      "alias": "furnishing"
+      "alias": "smart-home"
     }, {
       "label": "生活家电",
-      "alias": "smart-life"
+      "alias": "appliance"
     }, {
       "label": "设备管理",
       "alias": "device-management"
@@ -35,6 +35,6 @@
     "alias": "developer"
   }, {
     "label": "客户案例",
-    "alias": "cases"
+    "alias": "case"
   }]
 }
