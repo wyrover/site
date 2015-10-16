@@ -2,6 +2,23 @@
 page_title: "关于我们"
 stylesheets: ["about"]
 body_class: ["about-page"]
+media_reports:
+  -
+    text: "云智易携手微信硬件平台 驱动硬件智慧服务"
+    url: "http://support.xlink.cn/hc/kb/article/86815/"
+  -
+    text: "云智易荣膺2015创新互联网公司100佳"
+    url: "http://support.xlink.cn/hc/kb/article/86812/"
+  -
+    text: "云智易物联照明点亮智能生活"
+    url: "http://support.xlink.cn/hc/kb/article/86809/"
+  -
+    text: "nest火爆欧美 云智易助国内品牌开拓海外市场"
+    url: "http://support.xlink.cn/hc/kb/article/86793/"
+  -
+    text: "云智易为1000+创客创业大会提供云服务"
+    url: "http://support.xlink.cn/hc/kb/article/86782/"
+
 ---
 
 extends _layout
@@ -20,9 +37,9 @@ block content
           .orn
             img(src="#{current.base}images/orn_about.png", alt="")
           .cont
-            p 云智易最早于2010年开始服务于设备厂家，以设备M2M连接为产品起点，发展成为综合性的智能设备服务平台。
-            p 云智易的一站式解决方案，为设备厂家提供了从开发到运营的系列服务，包含硬件支持、软件开发、云平台、销售和O2O服务。
-            p 云智易由易居（中国）控股有限公司投资，并携手实惠O2O平台的等众多资源共同合作。
+            p 云智易由易居（中国）控股有限公司投资，并携手易居集团的相关资源共同推出的物联云平台，专注于智慧物联云服务领域，为客户提供软件和云平台的一体化方案。
+            p 云智易最早于2010年开始服务于设备厂家，以设备M2M连接为产品起点，发展成为综合性的物联云平台，现平台已服务有270多万智能设备终端，成功服务了联想、立达信、电信、德尔玛、恒大和等企业。
+            p 目前客户领域包含智慧家庭（智能家居、生活家电、智能穿戴等）、智能社区、智能商业、智能零售，设备范围覆盖以人为核心的智能生活圈，服务范围包含硬件支持、软件开发、云平台及更多增值服务。构建以客户为核心的生态合作伙伴，秉持以最优资源输出为客户提供有力一站式服务，合作伙伴包括海尔、电信、亚马逊、MTK、Realtek、汉枫、拓邦等数十家。
             p 我们的理念是：服务更多智能设备，为智能设备提供更多服务。
   // End: 关于云智易
 
@@ -49,3 +66,21 @@ block content
                 p 上海市闸北区广延路383号秋实楼7层
                 p 杭州市西湖区杭大路9号聚龙大厦东15楼
   // End: 联系我们
+  // Start: 媒体报道
+  .main-media
+    .container
+      h4 媒体报道
+      ul.media-report
+        each item in media_reports
+          li
+            a(href="#{item.url}" target="_blank")= item.text
+      .media-pictures
+        .picture
+          a(href="http://support.xlink.cn/hc/kb/article/86819/", target="_blank")
+           img(src="#{current.base}images/index/thumbs/new1.jpg")
+           span 云智易获"广东省物联网百强企业"
+        .picture
+          a(href="http://support.xlink.cn/hc/kb/article/86807/", target="_blank")
+            img(src="#{current.base}images/index/thumbs/new2.jpg")
+            span 云智易亮相CSHE 小游戏验证大平台
+  // End: 媒体报道
