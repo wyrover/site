@@ -41,10 +41,38 @@ $main-p
   color #393939
   font-size 20px
 
+//消息
+.main-news
+  width 100%
+  background #ebebeb
+
+  ul
+    width 600px
+    margin 0 auto
+    padding 13px 0
+    clearfix()
+
+    li
+      float left
+      margin 0 40px
+      color #393939
+
+      &:hover
+        color red
+
+      &:hover a
+        color red
+        text-decoration none
+
+      a
+        font-size 14px
+        color #393939
+
+
 // 智能化时代
 .main-smart
   text-align center
-  padding 70px 0
+  padding 70px 0px
 
   h3
     @extend $main-h3

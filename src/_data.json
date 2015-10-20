@@ -14,13 +14,13 @@
       "label": " 智能家居",
       "alias": "smart-home"
     }, {
-      "label": "生活家电",
+      "label": "生活电器",
       "alias": "appliance"
     }, {
       "label": "设备管理",
       "alias": "device-management"
     }, {
-      "label": "微信场景",
+      "label": "微信硬件接入",
       "alias": "wechat"
     }, {
       "label": "HomeKit",
